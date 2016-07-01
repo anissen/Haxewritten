@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset='utf-8'/>
+	<meta name="viewport" content="width=device-width" />
+	<title>::title::</title>
+
+	<base href="::baseHref::"/>
+
+	<!-- general css -->
+	<link rel="icon" href="[URL]/favicon.ico"/>
+
+	<meta name="keywords" content="[KEYWORDS]" />
+
+	<!-- Twitter Card data -->
+	<meta name="twitter:creator" content="[@TWITTER_USER]"/>
+
+	<!-- Open Graph data -->
+	<meta property="og:title" content="::title::" />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="[URL]" />
+	<meta property="og:image" content="[URL]/img/share.png" />
+  </head>
+<body>
+<div class="main-content">
+::raw pageContent::
+</div>
+
+<script>
+// Google Analytics script goes here
+</script>
+
+</body>
+</html>

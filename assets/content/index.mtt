@@ -1,0 +1,24 @@
+<h1>Index</h1>
+
+<hr/>
+
+<h3>category index pages</h3>
+<ul>
+::foreach category sitemap::
+    <li><a href="::category.folder::">::category.title::</a></li>
+::end::
+</ul>
+
+<h3>sitemap</h3>
+<ul>
+::foreach category sitemap::
+    <li><strong>::category.title::</strong>
+        <ul>
+        ::foreach page category.pages::
+            <li><a href="::page.outputPath::">::page.title::</a></li>
+        ::end::
+        </ul>
+    </li>
+::end::
+</ul>
+<hr/>

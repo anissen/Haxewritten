@@ -1,0 +1,7 @@
+-lib markdown
+-lib hxtemplo
+-cp src
+# -neko Haxewritten.n
+-main Main
+-dce full
+--interp
