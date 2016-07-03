@@ -11,16 +11,16 @@ typedef Page = {
     content :String
 }
 
-// http://try-haxe.mrcdk.com/#d8275
 class Test {
     public static function main() {
         // initialize the layout files
         initialize_templates('assets_test/');
         var pages = get_pages('assets_test/');
 
+        trace(get_files('assets_test/', ~/[.]md$/));
+
          // TODO: Pass to hooks
 
-        // TODO: Write to output
         for (page in pages) {
             var filename = page.title.trim().replace(' ', '-').toLowerCase() + '.html';
             output_page(page, 'assets_test/layout/page.mtt', 'output_test/' + filename);
@@ -61,6 +61,19 @@ class Test {
                 Template.fromFile(path);
             }
         }
+    }
+
+    static function get_files(dir :String, regex :EReg) :Array<String> {
+        var files = [];
+        for (file in FileSystem.readDirectory(dir)) {
+            var path = dir + file;
+            if (FileSystem.isDirectory(path)) {
+                files = files.concat(get_files(path + '/', regex));
+            } else if (regex.match(path)) {
+                files.push(path);
+            }
+        }
+        return files;
     }
 
     static function parse_markdown(content :String) :Page {
