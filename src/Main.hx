@@ -2,7 +2,7 @@ package;
 
 class Main {
     public static function main() {
-        var contentPath = 'assets/content/';
+        var contentPath = 'assets/';
         Generator.initialize_templates(contentPath, ~/[.]mtt$/);
 
         // function get_files(sitemap :Generator.Tree) :Array<Generator.FilePath> {
@@ -49,7 +49,7 @@ class Main {
             var filename = page.filepath.replaceExtension('html').humanize();
             var context = get_data_from_markdown(page);
             trace(filename);
-            Generator.output_page(context, contentPath + (filename == 'assets/content/index.html' ? 'layout/index.mtt' : 'layout/page.mtt'), 'output_test/' + filename);
+            Generator.output_page(context, contentPath + (filename == 'assets/index.html' ? 'layout/index.mtt' : 'layout/page.mtt'), 'output/' + filename);
         }
     }
 
