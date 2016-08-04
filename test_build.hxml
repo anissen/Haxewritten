@@ -1,4 +1,4 @@
--lib markdown
+-lib commonmark
 -lib hxtemplo
 -cp src
 # -neko Haxewritten.n

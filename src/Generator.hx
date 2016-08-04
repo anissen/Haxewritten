@@ -65,10 +65,17 @@ class Generator {
     //     File.copy(path, outputPath);
     // }
 
+    public static function to_markdown(content :String) :String {
+        var parser = new commonmark.Parser();
+        var ast = parser.parse(content);
+        var writer = new commonmark.HtmlRenderer();
+        return writer.render(ast);
+    }
+
     public static function get_pages(dir :FilePath, regex :EReg) :Array<Page> {
         return [ for (filepath in get_files(dir, regex, true)) {
             filepath: filepath,
-            content: Markdown.markdownToHtml(File.getContent(filepath)),
+            content: to_markdown(File.getContent(filepath)),
             data: (FileSystem.exists(filepath.replaceExtension('json')) ? parse_json_data(File.getContent(filepath.replaceExtension('json'))) : null)
         } ];
     }
