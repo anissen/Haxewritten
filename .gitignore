@@ -1,6 +1,9 @@
 # Project generated files #
 ######################
 output
+output_test
+semantic
+my-assets
 
 # OS generated files #
 ######################
@@ -11,9 +14,3 @@ output
 .Trashes
 ehthumbs.db
 Thumbs.db
-
-
-### blah
-
-semantic
-my-assets

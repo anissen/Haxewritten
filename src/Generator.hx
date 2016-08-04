@@ -1,267 +1,152 @@
 package;
-import haxe.Timer;
-import haxe.ds.StringMap;
-import markdown.AST.ElementNode;
-import markdown.AST.TextNode;
+
 import sys.FileSystem;
 import sys.io.File;
 import templo.Template;
+
 using StringTools;
 
+typedef Page = {
+    filepath :FilePath,
+    content :String,
+    data :Dynamic,
+    // subpages :Array<Page>
+}
+
+// enum Tree {
+//     Directory(path :FilePath, content: Array<Tree>);
+//     Resource(path :FilePath /* type enum + data ? */);
+// }
+
+abstract FilePath(String) from String to String {
+    public inline function new(path :String) { this = path; }
+    public function withoutExtension() :FilePath { return this.substr(0, this.lastIndexOf('.')); }
+    public function replaceExtension(ext :FilePath) :FilePath { return withoutExtension() + '.$ext'; }
+    public function withoutFileName() :FilePath { return this.substr(0, this.lastIndexOf('/')); }
+    public function humanize() :FilePath { return this.trim().replace(' ', '-').toLowerCase(); }
+}
+
 class Generator {
-  var contentPath = "./my-assets/content/";
-  var outputPath = "./output/";
-  public var titlePostFix = "";
-  
-  var _pages :Array<Page> = new Array<Page>();
-  var _folders :StringMap<Array<Page>> = new StringMap<Array<Page>>();
-  
-  public function new() { }
-  
-  public function build(doMinify :Bool = false) {
-    // Template.fromFile(contentPath + "layout.mtt").execute({});
-    addGeneralPages();
-    addPages();
-
-    var sitemap :Array<Category> = createSitemap();
-    
-    Timer.measure(function() {
-      for (page in _pages) {
-        // set the data for the page
-        var data = {
-          title: '${page.title} $titlePostFix', 
-          baseHref: getBaseHref(page),
-          pages: _pages,
-          sitemap: sitemap,
-          currentPage: page,
-          pageContent: null
-        };
-        data.pageContent = (page.pageContent != null ? page.pageContent : getContent(contentPath + page.contentPath, data));
-
-        // execute the template
-        var template = Template.fromFile(contentPath + page.templatePath);
-        var html = Minifier.removeComments(template.execute(data));
-        
-        if (doMinify) {
-          // strip crap
-          var length = html.length;
-          html = Minifier.minify(html);
-          var newLength = html.length;
-          //trace("optimized " + (Std.int(100 / length * (length - newLength) * 100) / 100) + "%");
-        }
-        
-        // write output into file
-        var targetDirectory = getDirectoryPath(outputPath + page.outputPath);
-        if (!FileSystem.exists(targetDirectory)) {
-          FileSystem.createDirectory(targetDirectory);
-        }
-        File.saveContent(outputPath + page.outputPath, html);
-      }
-    });
-
-    trace(sitemap.length + " categories");
-    trace(_pages.length + " pages done!");
-  }
-  
-  function addPage(page :Page, folder :String = null) {
-    _pages.push(page);
-    
-    if (folder != null) {
-      if (!_folders.exists(folder)) {
-        _folders.set(folder, []);
-      }
-      _folders.get(folder).push(page);
-    }
-  }
-  
-  function addGeneralPages() {
-    var homePage = new Page("layout.mtt", "index.mtt", "index.html")
-                          .setTitle("Easy to read Haxe coding examples");
-                          
-    var errorPage = new Page("layout.mtt", "404.mtt", "404.html")
-                          .setTitle("Page not found");
-      
-    addPage(homePage, "/home");
-    addPage(errorPage, "/404");
-  }
-
-  function addPages(path :String = "pages/") {
-    for (file in FileSystem.readDirectory(contentPath + path)) {
-      if (file.charAt(0) == '.') continue;
-      if (!FileSystem.isDirectory(contentPath + path + file)) {
-        var page = new Page("page.mtt", path + file, 
-                (path + getWithoutExtension(file)).replace(" ", "-").toLowerCase() + ".html");
-        page.pageContent = parseMarkdownContent(page, path + file);
-        addPage(page, path);
-      } else {
-        addPages(path + file + "/" );
-      }
-    }
-  }
-    
-  function replaceTryHaxeTags(content :String) :String {
-    //[tryhaxe](http://try.haxe.org/embed/ae6ef)
-    return  ~/(\[tryhaxe\])(\()(.+?)(\))/g.replace(content, '<iframe src="$3" class="try-haxe"><a href="$3">Try Haxe!</a></iframe>');
-  }
-  
-  function getBaseHref(page :Page) {
-    // if (page.outputPath == "404.html") {
-    //   return basePath;
+    // public static function get_page_heirarchy(sitemap :Generator.Tree) :Array<Path> {
+    //     return switch (sitemap) {
+    //         case Resource(path): [{
+    //             filepath: path,
+    //             content: Markdown.markdownToHtml(File.getContent(filepath)),
+    //             (FileSystem.exists(filepath.replaceExtension('json')) ? parse_json_data(File.getContent(filepath.replaceExtension('json'))) : null)
+    //         }];
+    //         case Directory(path, list): var files = []; for (l in list) files = files.concat(get_files(l)); files;
+    //     }
     // }
-    var href = [for (s in page.outputPath.split("/")) ".."];
-    href[0] = ".";
-    return href.join("/");
-  }
 
-  static inline function getDirectoryPath(file :String) {
-    var paths = file.split("/");
-    paths.pop();
-    return paths.join("/");
-  }
-  
-  static inline function getExtension(file :String) {
-    return file.split(".").pop();
-  }
-  
-  static inline function getWithoutExtension(file :String) {
-    var path = file.split(".");
-    path.pop();
-    return path.join(".");
-  }
-  
-  function getContent(file :String, data :Dynamic) {
-    return switch(getExtension(file)) {
-      case "md":  parseMarkdownContent(null, file);
-      case "mtt": Template.fromFile(file).execute(data);
-      default:    File.getContent(file);
-    }
-  }
+    public static function do_everything(contentPath :String, handler :Page->Void) {
+        trace('Load layouts');
+        for (layout in Generator.get_files(contentPath, ~/[.]mtt$/)) {
+            trace('Initializing layout $layout');
+            Template.fromFile(layout);
+        }
 
-  // categorizes the folders 
-  function createSitemap() :Array<Category> {
-    var sitemap = [];
-    for (key in _folders.keys()) {
-      var structure = key.split("/");
-      structure.pop();
-      var id = structure.pop();
-      if (key.indexOf("pages/") == 0) {
-        sitemap.push(new Category(id.toLowerCase().replace(" ", "-"), id, key, _folders.get(key)));
-      }
-    }
-    return sitemap;
-  }
-  
-    public function parseMarkdownContent(page :Page, file :String) :String {
-        var document = new Markdown.Document();
-        var markdown = replaceTryHaxeTags(File.getContent(contentPath + file));
-
-        try {
-            // replace windows line endings with unix, and split
-            var lines = ~/(\r\n|\r)/g.replace(markdown, '\n').split("\n");
-
-            // parse ref links
-            //document.parseRefLinks(lines);
-
-            // parse tags
-            var link = document.refLinks["tags"];
-            if (link != null) {
-                trace(link);
-                // page.tags = link.title.split(",").map(function(a) return a.toLowerCase().trim());
-            }
-
-            // parse ast
-            var blocks = document.parseLines(lines);
-
-            // pick first header, use it as title for the page
-            for (block in blocks) {
-                var el = Std.instance(block, ElementNode);
-                if (el != null) {
-                    if (page.title == null) {
-                        if (el.tag == 'p' && el.children.length > 0) {
-                            var text = Std.instance(el.children[0], TextNode);
-                            if (text != null && text.text.indexOf(':') > 0) {
-                                var tag = text.text.split(':');
-                                page.data.push({ tag: tag[0].trim(), data: tag[1].trim() });
-                            }
-                            // trace('first child: "${el.children[0]}"');
-                        }
-                    }
-                    if (el.tag == "h1" && !el.isEmpty()) {
-                        page.title = new markdown.HtmlRenderer().render(el.children);
-                        break;
-                    }
-                }
-            }
-            return Markdown.renderHtml(blocks);
-        } catch (e:Dynamic){
-            return '<pre>$e</pre>';
+        for (page in get_pages(contentPath, ~/[.]md$/)) {
+            handler(page);
         }
     }
-  
-  public function includeDirectory(dir :String, ?path :String) {
-    if (path == null) path = outputPath;
-    // trace("include directory: " + path);
-    
-    for (file in FileSystem.readDirectory(dir)) {
-      var srcPath = '$dir/$file';
-      var dstPath = '$path/$file';
-      if (FileSystem.isDirectory(srcPath)) {
-        FileSystem.createDirectory(dstPath);
-        includeDirectory(srcPath, dstPath);
-      } else {
-        File.copy(srcPath, dstPath);
-      }
+
+    public static function initialize_templates(dir :FilePath, regex :EReg) {
+        for (filepath in get_files(dir, regex)) Template.fromFile(filepath);
     }
-  }
+
+    public static function output_page(data :Dynamic, layoutPath :FilePath, outputPath :FilePath) {
+        if (!FileSystem.exists(outputPath.withoutFileName())) FileSystem.createDirectory(outputPath.withoutFileName());
+        var template = Template.fromFile(layoutPath);
+        File.saveContent(outputPath, template.execute(data));
+    }
+
+    // public static function output_resource(path :FilePath, outputPath :FilePath) {
+    //     if (!FileSystem.exists(outputPath.withoutFileName())) FileSystem.createDirectory(outputPath.withoutFileName());
+    //     File.copy(path, outputPath);
+    // }
+
+    public static function get_pages(dir :FilePath, regex :EReg) :Array<Page> {
+        return [ for (filepath in get_files(dir, regex, true)) {
+            filepath: filepath,
+            content: Markdown.markdownToHtml(File.getContent(filepath)),
+            data: (FileSystem.exists(filepath.replaceExtension('json')) ? parse_json_data(File.getContent(filepath.replaceExtension('json'))) : null)
+        } ];
+    }
+
+    // public static function sitemap(path :FilePath, regex :EReg) :Tree {
+    //     if (!FileSystem.isDirectory(path)) return Resource(path);
+    //     // return Directory(path, [ for (p in FileSystem.readDirectory(path)) sitemap('$path/$p'.replace('//', '/')) ]);
+    //     var resources = [];
+    //     var directories = [];
+    //     for (file in FileSystem.readDirectory(path)) {
+    //         var p = '$path/$file'.replace('//', '/');
+    //         if (FileSystem.isDirectory(p)) {
+    //             directories.push(p);
+    //         } else if (regex.match(p)) {
+    //             resources.push(p);
+    //         }
+    //     }
+    //     return Directory(path, [ for (p in resources.concat(directories)) sitemap(p, regex) ]); // resources first, then directories
+    // }
+
+    static public function get_files(dir :FilePath, regex :EReg, ?reverseOrder :Bool = false) :Array<FilePath> {
+        var files = [];
+        var directories = [];
+        for (file in FileSystem.readDirectory(dir)) {
+            var path = dir + file;
+            if (FileSystem.isDirectory(path)) {
+                directories.push(path);
+            } else if (regex.match(path)) {
+                files.push(path);
+            }
+        }
+        for (directory in directories) {
+            files = files.concat(get_files(directory + '/', regex));
+        }
+        if (reverseOrder) files.reverse();
+        return files;
+    }
+
+    static function parse_json_data(content :String) :Dynamic {
+        return haxe.Json.parse(content);
+    }
 }
 
-class Page { 
-  public var visible :Bool = true;
-  public var title :String;
-  public var templatePath :String;
-  public var contentPath :String;
-  public var outputPath :String;
-  // public var customData :Dynamic;
-  public var pageContent :String;
-  public var data :Array<{ tag: String, data: Dynamic }>;
-  
-  public function new(templatePath :String, contentPath :String, outputPath :String) {
-    this.templatePath = templatePath;
-    this.contentPath = contentPath;
-    this.outputPath = outputPath;
-    this.data = [];
-  }
-  
-  // public function setCustomData(data :Dynamic) :Page {
-  //   this.customData = data;
-  //   return this;
-  // }
-  
-  public function setTitle(title :String) :Page {
-    this.title = title;
-    return this;
-  }
-  
-  public function hidden() {
-    visible = false;
-    return this;
-  }
-}
+/*
+class MyGenerator {
+    var contentPath = 'assets/content/';
 
-class Category {
-  public var title:String;
-  public var id:String;
-  public var folder:String;
-  public var pages:Array<Page>;
-  
-  public function new(id:String, title:String, folder:String, pages:Array<Page>){
-    this.id = id;
-    this.title = title;
-    this.folder = folder;
-    this.pages = pages;
-  }
-  
-  public function getPageCount():Int {
-    return [for (page in pages) if (page.visible) page].length;
-  }
+    public function new(contentPath :String, outputPath) {
+        this.contentPath = contentPath;
+        Generator.initialize_templates(contentPath, ~/[.]mtt$/);
+    }
+
+    public function do_it() {
+        var pages = Generator.get_pages(contentPath, ~/[.]md$/); // maybe return a heirarchical structure instead, Generator.get_resources()
+        trace(pages.length + ' pages');
+
+        for (page in pages) {
+            // page = minify(extract_data(remove_comments(page));
+            var filename = page.filepath.replaceExtension('html').humanize();
+            var context = get_data_from_markdown(page);
+
+            // var comments = [];
+            // var withoutComments = ~/<!--([\s\S]*?)-->/gm.map(context.content, function(r) {
+            //     comments.push(r.matched(0).replace('<!--', '').replace('-->', '').trim());
+            //     return ''; // remove comments
+            // });
+            // trace('comments: $comments');
+            
+            // var simpleCommentCollector = new EReg('<!--(.*?)-->', 'g');
+            // trace(simpleCommentCollector.match(context.content));
+            // simpleCommentCollector.map(context.content, function(r) {
+            //     var match = r.matched(0);
+            //     trace('simpleCollector match: $match');
+            //     return match;
+            // });
+
+            Generator.output_page(context, contentPath + 'layout/page.mtt', 'output_test/' + filename);
+        }
+    }
 }
+*/

@@ -2,6 +2,6 @@
 -lib hxtemplo
 -cp src
 # -neko Haxewritten.n
--main Test
+-main Main
 -dce full
 --interp

@@ -1,0 +1,93 @@
+<style>
+figure {
+  width: 300px;
+  height: 200px;
+  margin: 0;
+  padding: 0;
+  /*background: #fff;*/
+  overflow: hidden;
+}
+
+figure:hover+span {
+  /*bottom: -36px;*/
+  /*opacity: 1;*/
+}
+
+/* Rotate */
+.rotate_zoom figure img {
+  -webkit-transform: rotate(15deg) scale(1.4);
+  transform: rotate(15deg) scale(1.4);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+.rotate_zoom figure:hover img {
+  -webkit-transform: rotate(0) scale(1);
+  transform: rotate(0) scale(1);
+}
+
+/* Opacity #2 */
+.color_overlay figure {
+  background: red;
+}
+.color_overlay figure img {
+  opacity: .5;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+.color_overlay figure:hover img {
+  opacity: 1;
+}
+
+/* Shine */
+.shiny figure {
+  position: relative;
+}
+.shiny figure::before {
+  position: absolute;
+  top: 0;
+  left: -75%;
+  z-index: 2;
+  display: block;
+  content: '';
+  width: 50%;
+  height: 100%;
+  background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+  -webkit-transform: skewX(-25deg);
+  transform: skewX(-25deg);
+}
+.shiny figure:hover::before {
+  -webkit-animation: shine .75s;
+  animation: shine .75s;
+}
+@-webkit-keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+@keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+</style>
+
+<h2>Effects!</h2>
+<div class="rotate_zoom color_overlay shiny">
+    <figure><img src="http://nxworld.net/codepen/css-image-hover-effects/pic01.jpg" /></figure><br/>
+    <figure><img src="http://nxworld.net/codepen/css-image-hover-effects/pic02.jpg" /></figure><br/>
+    <figure><img src="http://nxworld.net/codepen/css-image-hover-effects/pic03.jpg" /></figure><br/>
+    <figure><img src="http://nxworld.net/codepen/css-image-hover-effects/pic01.jpg" /></figure><br/>
+    <figure><img src="http://nxworld.net/codepen/css-image-hover-effects/pic02.jpg" /></figure><br/>
+    <figure><img src="http://nxworld.net/codepen/css-image-hover-effects/pic03.jpg" /></figure><br/>
+</div>
+
+<!-- TODO: Replace image with gif on mouse-over (see http://www.aseprite.org/) -->
+
+<script>
+var colors = ['#001F3F', '#0074D9', '#7FDBFF', '#39CCCC', '#3D9970', '#2ECC40', '#01FF70', '#FFDC00', '#FF851B', '#FF4136', '#F012BE', '#B10DC9', '#85144B'];
+var elements = document.getElementsByTagName('figure');
+for (var i = 0; i < elements.length; i++) {
+  elements[i].setAttribute('style', 'background-color:' + colors[Math.floor(Math.random() * colors.length)] + ';');
+}
+</script>
