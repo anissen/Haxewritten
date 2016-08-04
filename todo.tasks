@@ -1,0 +1,8 @@
+
+TODO:
+
+ ✔ Strip down to bare-bones @done (01-07-16 20:59)
+ ☐ Make travis hook with travix
+ ☐ Hook to be able to process output files and content
+ ☐ Simple ghpages deployment script
+ ✔ Add file watch @done (01-07-16 19:41)

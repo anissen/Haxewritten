@@ -23,7 +23,9 @@
   </head>
 <body>
 <div class="main-content">
-::raw pageContent::
+START
+::raw __content__::
+END
 </div>
 
 <script>

@@ -2,13 +2,14 @@ package;
 import haxe.Timer;
 import haxe.ds.StringMap;
 import markdown.AST.ElementNode;
+import markdown.AST.TextNode;
 import sys.FileSystem;
 import sys.io.File;
 import templo.Template;
 using StringTools;
 
 class Generator {
-  var contentPath = "./assets/content/";
+  var contentPath = "./my-assets/content/";
   var outputPath = "./output/";
   public var titlePostFix = "";
   
@@ -18,6 +19,7 @@ class Generator {
   public function new() { }
   
   public function build(doMinify :Bool = false) {
+    // Template.fromFile(contentPath + "layout.mtt").execute({});
     addGeneralPages();
     addPages();
 
@@ -73,10 +75,10 @@ class Generator {
   }
   
   function addGeneralPages() {
-    var homePage = new Page("layout/layout.mtt", "index.mtt", "index.html")
+    var homePage = new Page("layout.mtt", "index.mtt", "index.html")
                           .setTitle("Easy to read Haxe coding examples");
                           
-    var errorPage = new Page("layout/layout.mtt", "404.mtt", "404.html")
+    var errorPage = new Page("layout.mtt", "404.mtt", "404.html")
                           .setTitle("Page not found");
       
     addPage(homePage, "/home");
@@ -87,7 +89,7 @@ class Generator {
     for (file in FileSystem.readDirectory(contentPath + path)) {
       if (file.charAt(0) == '.') continue;
       if (!FileSystem.isDirectory(contentPath + path + file)) {
-        var page = new Page("/layout/page.mtt", path + file, 
+        var page = new Page("page.mtt", path + file, 
                 (path + getWithoutExtension(file)).replace(" ", "-").toLowerCase() + ".html");
         page.pageContent = parseMarkdownContent(page, path + file);
         addPage(page, path);
@@ -149,41 +151,56 @@ class Generator {
     return sitemap;
   }
   
-  public function parseMarkdownContent(page :Page, file :String) :String {
-    var document = new Markdown.Document();
-    var markdown = replaceTryHaxeTags(File.getContent(contentPath + file));
+    public function parseMarkdownContent(page :Page, file :String) :String {
+        var document = new Markdown.Document();
+        var markdown = replaceTryHaxeTags(File.getContent(contentPath + file));
 
-    try {
-      // replace windows line endings with unix, and split
-      var lines = ~/(\r\n|\r)/g.replace(markdown, '\n').split("\n");
-      
-      // parse ref links
-      document.parseRefLinks(lines);
-      
-      // parse ast
-      var blocks = document.parseLines(lines);
-      
-      // pick first header, use it as title for the page
-      if (page != null) {
-        for (block in blocks) {
-          var el = Std.instance(block, ElementNode);
-          if (el != null) {
-            if (el.tag == "h1" && !el.isEmpty()) {
-              page.title = new markdown.HtmlRenderer().render(el.children);
-              break;
+        try {
+            // replace windows line endings with unix, and split
+            var lines = ~/(\r\n|\r)/g.replace(markdown, '\n').split("\n");
+
+            // parse ref links
+            //document.parseRefLinks(lines);
+
+            // parse tags
+            var link = document.refLinks["tags"];
+            if (link != null) {
+                trace(link);
+                // page.tags = link.title.split(",").map(function(a) return a.toLowerCase().trim());
             }
-          }
+
+            // parse ast
+            var blocks = document.parseLines(lines);
+
+            // pick first header, use it as title for the page
+            for (block in blocks) {
+                var el = Std.instance(block, ElementNode);
+                if (el != null) {
+                    if (page.title == null) {
+                        if (el.tag == 'p' && el.children.length > 0) {
+                            var text = Std.instance(el.children[0], TextNode);
+                            if (text != null && text.text.indexOf(':') > 0) {
+                                var tag = text.text.split(':');
+                                page.data.push({ tag: tag[0].trim(), data: tag[1].trim() });
+                            }
+                            // trace('first child: "${el.children[0]}"');
+                        }
+                    }
+                    if (el.tag == "h1" && !el.isEmpty()) {
+                        page.title = new markdown.HtmlRenderer().render(el.children);
+                        break;
+                    }
+                }
+            }
+            return Markdown.renderHtml(blocks);
+        } catch (e:Dynamic){
+            return '<pre>$e</pre>';
         }
-      }
-      return Markdown.renderHtml(blocks);
-    } catch (e:Dynamic){
-      return '<pre>$e</pre>';
     }
-  }
   
   public function includeDirectory(dir :String, ?path :String) {
     if (path == null) path = outputPath;
-    trace("include directory: " + path);
+    // trace("include directory: " + path);
     
     for (file in FileSystem.readDirectory(dir)) {
       var srcPath = '$dir/$file';
@@ -204,19 +221,21 @@ class Page {
   public var templatePath :String;
   public var contentPath :String;
   public var outputPath :String;
-  public var customData :Dynamic;
+  // public var customData :Dynamic;
   public var pageContent :String;
+  public var data :Array<{ tag: String, data: Dynamic }>;
   
   public function new(templatePath :String, contentPath :String, outputPath :String) {
     this.templatePath = templatePath;
     this.contentPath = contentPath;
     this.outputPath = outputPath;
+    this.data = [];
   }
   
-  public function setCustomData(data :Dynamic) :Page {
-    this.customData = data;
-    return this;
-  }
+  // public function setCustomData(data :Dynamic) :Page {
+  //   this.customData = data;
+  //   return this;
+  // }
   
   public function setTitle(title :String) :Page {
     this.title = title;
