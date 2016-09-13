@@ -9,7 +9,7 @@ using StringTools;
 typedef Page = {
     filepath :FilePath,
     content :String,
-    data :Dynamic,
+    data :Dynamic
 }
 
 abstract FilePath(String) from String to String {

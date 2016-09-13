@@ -1,0 +1,8 @@
+::use 'layout.mtt'::
+<div class="ui segment">
+
+<h2>::title:: (::year::)</h2>
+
+</div>
+
+::end::
