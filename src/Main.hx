@@ -17,13 +17,17 @@ class Main {
         //     Generator.output_page(context, contentPath + (filename == 'assets/content/index.html' ? 'layout/index.mtt' : 'layout/page.mtt'), 'output/' + filename);
         // }
 
+        // TODO:
+        // Clean output
+        // Copy include dir
+
         var portfolio_data = haxe.Json.parse(sys.io.File.getContent('assets/portfolio/portfolio.json'));
         var projects :Array<Dynamic> = portfolio_data.projects;
         trace('Building ${projects.length} projects');
         for (project in projects) {
             var title :String = project.title;
             var output_filename = title.trim().replace(' ', '-').toLowerCase() + '.html';
-            Generator.output_page(project, 'assets/layout/page.mtt', 'output/$output_filename');
+            Generator.output_page(project, 'assets/layout/page.mtt', 'output/pages/$output_filename');
         }
     }
 
