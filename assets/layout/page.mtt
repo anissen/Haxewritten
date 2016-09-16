@@ -9,7 +9,7 @@
 
 <div class="ui small images">
 ::foreach picture resources.pictures::
-    <img class="ps_img" src="./../::picture.src::" alt="::picture.title::"/>
+    <img class="ps-img hand-icon hvr-bob" src="./../::picture.src::" alt="::picture.title::"/>
 ::end::
 </div>
 
@@ -70,10 +70,8 @@ var openPhotoSwipe = function(index) {
 
 /* openPhotoSwipe(); */
 
-var images = document.querySelectorAll('.ps_img');
-console.log('images: ', images);
+var images = document.querySelectorAll('.ps-img');
 images.forEach(function(img, index) {
-    console.log(index);
     img.onclick = function() { openPhotoSwipe(index); };
 });
 </script>

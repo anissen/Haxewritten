@@ -10,8 +10,9 @@
 	<!-- general css -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css"/>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css"/>
-    
+
     <link rel="stylesheet" type="text/css" href="../include/css/semantic.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../include/css/figures.css"/>
 	<link rel="icon" href="[URL]/favicon.ico"/>
 
 	<meta name="keywords" content="[KEYWORDS]" />
