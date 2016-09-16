@@ -225,22 +225,34 @@
           "pictures": [
               {
                 "src": "projects/beatentraxx/beaten_traxx.jpg",
-                "title": "Beaten Traxx logo"
+                "title": "Beaten Traxx logo",
+                "x": 800,
+                "y": 612
               }, {
                 "src": "projects/beatentraxx/Screenshot-Prototype-Base-11.jpg",
-                "title": "Bullet physics and particle systems"
+                "title": "Bullet physics and particle systems",
+                "x": 1034,
+                "y": 774
               }, {
                 "src": "projects/beatentraxx/Screenshot-Prototype-Base-12.jpg",
-                "title": "Bullet physics and particle systems"
+                "title": "Bullet physics and particle systems",
+                "x": 1034,
+                "y": 774
               }, {
                 "src": "projects/beatentraxx/Screenshot-Prototype-Base-13.jpg",
-                "title": "Floating islands"
+                "title": "Floating islands",
+                "x": 1034,
+                "y": 774
               }, {
                 "src": "projects/beatentraxx/Screenshot-Prototype-Base-15.jpg",
-                "title": "Floating islands"
+                "title": "Floating islands",
+                "x": 1034,
+                "y": 774
               }, {
                 "src": "projects/beatentraxx/Screenshot-Prototype-Base-16.jpg",
-                "title": "Bullet physics"
+                "title": "Bullet physics",
+                "x": 1029,
+                "y": 776
               }
             ]
         }
