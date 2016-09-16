@@ -1,18 +1,41 @@
 ::use 'layout.mtt'::
-<div class="ui segment">
 
-<h2>::title:: (::year::)</h2>
+ <style type="text/css">
+  .ui.menu .item img.logo {
+    margin-right: 1.5em;
+  }
+  .main.container {
+    margin-top: 5em;
+  }
+</style>
 
-<p><b>::description.short::</b></p>
-
-<p><i>::raw description.long::</i></p>
-
-<div class="ui small images">
-::foreach picture resources.pictures::
-    <img class="ps-img hand-icon hvr-bob" src="./../::picture.src::" alt="::picture.title::"/>
-::end::
+<div class="ui fixed inverted menu">
+    <div class="ui container">
+      <a href="#" class="header item">
+        <!-- <img class="logo" src="assets/images/logo.png"></img> -->
+        Home
+      </a>
+      <a href="#" class="item">Portfolio</a>
+    </div>
 </div>
 
+<div class="ui raised segment main text container">
+    <h1 class="ui header">::title:: <small>(::year::)</small></h1>
+    <p><b>::description.short::</b></p>
+    <p>::raw description.long::</p>
+
+    <h4 class="ui horizontal header divider">
+        Media
+    </h4>
+
+    <center>
+    <div class="ui aligned medium images">
+    ::foreach picture resources.pictures::
+        <img class="ps-img hand-icon hvr-bob" src="./../::picture.src::" alt="::picture.title::"/>
+    ::end::
+    </div>
+    </center>
+</div>
 
 <!-- Root element of PhotoSwipe. Must have class pswp. -->
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
@@ -48,8 +71,6 @@
             </div>
         </div>
     </div>
-</div>
-
 </div>
 
 <script>
