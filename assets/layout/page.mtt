@@ -1,13 +1,73 @@
 ::use 'layout.mtt'::
 
  <style type="text/css">
+/*body {
+    background-color: grey;
+}*/
+
   .ui.menu .item img.logo {
     margin-right: 1.5em;
   }
   .main.container {
     margin-top: 5em;
   }
+  .main.container {
+    margin-bottom: 2em;
+  }
+
+
+.ui.vertical.stripe {
+  padding: 8em 0em;
+}
+.ui.vertical.stripe h3 {
+  font-size: 2em;
+}
+.ui.vertical.stripe .button + h3,
+.ui.vertical.stripe p + h3 {
+  margin-top: 3em;
+}
+.ui.vertical.stripe .floated.image {
+  clear: both;
+}
+.ui.vertical.stripe p {
+  font-size: 1.33em;
+}
+.ui.vertical.stripe .horizontal.divider {
+  margin: 3em 0em;
+}
 </style>
+
+  <div class="ui vertical stripe segment">
+    <div class="ui middle aligned stackable grid container">
+      <div class="row">
+        <div class="six wide column">
+          <h3 class="ui header">::title:: <small>(::year::)</small></h3>
+          <p><b>::description.short::</b></p>
+          <p>::raw description.long::</p>
+        </div>
+        <div class="eight wide right floated column">
+            <div class="ui aligned fluid bordered images">
+                <img class="ps-img hand-icon hvr-bob" src="./../::resources.pictures[0].src::" alt="::resources.pictures[0].title::"/>
+            </div>
+        </div>
+      </div>
+      <div class="row" ::cond resources.pictures.length > 1::>
+        <div class="center aligned column">
+        <h4 class="ui horizontal header divider">
+            Media
+        </h4>
+          <div class="ui aligned large bordered images">
+            ::foreach picture resources.pictures::
+                ::if repeat.picture.index > 0::
+                <img class="ps-img hand-icon hvr-bob" src="./../::picture.src::" alt="::picture.title::"/>
+                ::end::
+            ::end::
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 <div class="ui fixed inverted menu">
     <div class="ui container">
