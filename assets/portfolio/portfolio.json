@@ -44,15 +44,17 @@
           "long": "The Flying Carpet game was made for the course '3D Prototyping' on the IT programme at the University of Aarhus. Its purpose was to provide a simple game that could be controlled by a physical controller device using sensors attached to an Arduino board.</p><p>See <a href='https://sites.google.com/site/flyingcarpetsim/'>project website</a>"
         },
         "resources": {
-          "videos": {
-            "video": {
+          "videos": [
+            {
               "vimeo_id": "16502098"
             }
-          },
+          ],
           "pictures": [
               {
                 "src": "projects/flyingcarpet/screen.jpg",
-                "title": "Collecting diamonds with a flying carpet"
+                "title": "Collecting diamonds with a flying carpet",
+                "x": 729,
+                "y": 535
               }
             ]
         }
@@ -67,19 +69,29 @@
           "pictures": [
               {
                 "src": "projects/behaviortreeditor/workbench.png",
-                "title": "The workbench: Game and behavior tree editor"
+                "title": "The workbench: Game and behavior tree editor",
+                "x": 1220,
+                "y": 717
               }, {
                 "src": "projects/behaviortreeditor/scene2.png",
-                "title": "The example game"
+                "title": "The example game",
+                "x": 600,
+                "y": 302
               }, {
                 "src": "projects/behaviortreeditor/editor-ui.png",
-                "title": "Behavior tree editor UI"
+                "title": "Behavior tree editor UI",
+                "x": 708,
+                "y": 710
               }, {
                 "src": "projects/behaviortreeditor/examplescene3.png",
-                "title": "Example of agent behavior"
+                "title": "Example of agent behavior",
+                "x": 592,
+                "y": 430
               }, {
                 "src": "projects/behaviortreeditor/agent.png",
-                "title": "In-game enemy agent"
+                "title": "In-game enemy agent",
+                "x": 500,
+                "y": 496
               }
             ]
         }
@@ -106,11 +118,11 @@
           "long": "Experiment using genetics and motivation-based behavior to simulate evolution.</p><p>See <a href='htt//daimi.au.dk/~anissen/motivation'>project website</a>"
         },
         "resources": {
-          "videos": {
-            "video": {
+          "videos": [
+            {
               "vimeo_id": "8399833"
             }
-          },
+          ],
           "pictures": [
               {
                 "src": "projects/motivation/motivation1.jpg",
@@ -173,16 +185,24 @@
           "pictures": [
               {
                 "src": "projects/dungeonsim/Screenshot-DungeonSim-10.png",
-                "title": "Imps in the dungeon"
+                "title": "Imps in the dungeon",
+                "x": 810,
+                "y": 629
               }, {
                 "src": "projects/dungeonsim/Screenshot-DungeonSim-9.png",
-                "title": "Imps pathfinding in the dungeon"
+                "title": "Imps pathfinding in the dungeon",
+                "x": 810,
+                "y": 629
               }, {
                 "src": "projects/dungeonsim/Screenshot-DungeonSim-5.png",
-                "title": "Getting from point A to point B"
+                "title": "Getting from point A to point B",
+                "x": 810,
+                "y": 629
               }, {
                 "src": "projects/dungeonsim/Screenshot-DungeonSim-12.png",
-                "title": "Ground-level enterance to the dungeon"
+                "title": "Ground-level enterance to the dungeon",
+                "x": 810,
+                "y": 629
               }
             ]
         }
@@ -197,13 +217,19 @@
           "pictures": [
               {
                 "src": "projects/behaviorsim/Screenshot-BehaviorSim-1.png",
-                "title": "Units gathering resources"
+                "title": "Units gathering resources",
+                "x": 810,
+                "y": 629
               }, {
                 "src": "projects/behaviorsim/Screenshot-BehaviorSim.png",
-                "title": "Gold mines, depot, water and home"
+                "title": "Gold mines, depot, water and home",
+                "x": 810,
+                "y": 629
               }, {
                 "src": "projects/behaviorsim/Screenshot-BehaviorEditor.png",
-                "title": "Behavior tree execution"
+                "title": "Behavior tree execution",
+                "x": 810,
+                "y": 629
               }
             ]
         }
@@ -217,11 +243,11 @@
         "resources": {
           "dir": "beatentraxx",
           "logo": "bt.png",
-          "videos": {
-            "video": {
+          "videos": [
+            {
               "vimeo_id": "5050786"
             }
-          },
+          ],
           "pictures": [
               {
                 "src": "projects/beatentraxx/beaten_traxx.jpg",
@@ -266,11 +292,11 @@
         "resources": {
           "dir": "openengine",
           "logo": "oe_logo.jpg",
-          "videos": {
-            "video": {
+          "videos": [
+            {
               "vimeo_id": "5050786"
             }
-          },
+          ],
           "pictures": [
               {
                 "src": "projects/openengine/oe_logo.jpg",
@@ -482,11 +508,11 @@
                 "title": "Custom game description screen"
               }
             ],
-          "videos": {
-            "video": {
+          "videos": [
+            {
               "vimeo_id": "5050942"
             }
-          }
+          ]
         }
       }, {
         "title": "Meteor Impact",
@@ -527,11 +553,11 @@
         },
         "resources": {
           "dir": "amis",
-          "videos": {
-            "video": {
+          "videos": [
+            {
               "vimeo_id": "8301381"
             }
-          },
+          ],
           "pictures": [
               {
                 "src": "projects/none/logo.jpg",

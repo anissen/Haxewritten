@@ -11,6 +11,8 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css"/>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css"/>
 
+    <link rel="stylesheet" href="https://cdn.plyr.io/2.0.7/plyr.css"/>
+
     <link rel="stylesheet" type="text/css" href="../include/css/semantic.min.css"/>
     <link rel="stylesheet" type="text/css" href="../include/css/figures.css"/>
 	<link rel="icon" href="[URL]/favicon.ico"/>
@@ -19,9 +21,6 @@
 
 	<!-- Twitter Card data -->
 	<meta name="twitter:creator" content="[@TWITTER_USER]"/>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js"></script>
 
 	<!-- Open Graph data -->
 	<meta property="og:title" content="::title::" />
@@ -33,6 +32,12 @@
 <div class="main-content">
 ::raw __content__::
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js"></script>
+
+<script src="https://cdn.plyr.io/2.0.7/plyr.js"></script>
+<script>plyr.setup();</script>
 
 <script>
 // Google Analytics script goes here
