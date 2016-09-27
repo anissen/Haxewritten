@@ -1,570 +1,746 @@
 {
-  "projects": [
-      {
-        "title": "Merry Christmas",
-        "year": "2012",
-        "description": {
-          "short": "An interactive Christmas card",
-          "long": "A Christmas card that uses verlet integration physics to simulate strings of characters.</p><p>See <a href='http://andersnissen.com/jul/'>project website</a></p><p><a href='https://github.com/anissen/anissen.github.com/tree/master/jul'>Source code</a>"
-        },
-        "resources": {
-          "pictures": [
-              {
-                "src": "projects/merrychristmas/godjul.png",
-                "title": "Strings of characters"
-              }, {
-                "src": "projects/merrychristmas/godjul-2.png",
-                "title": "Remaining characters after shaking the scene"
-              }
-            ]
-        }
-      }, {
-        "title": "Funny Bones",
-        "year": "2012",
-        "description": {
-          "short": "Web-based rigid body viewer/editor",
-          "long": "Web-based rigid body physics simulator using three.js and verlet integartion.</p><p>See <a href='http://andersnissen.com/funny-bones/app/index-simple.html'>project website</a></p><p><a href='https://github.com/anissen/funny-bones'>Source code</a>"
-        },
-        "resources": {
-          "pictures": [
-              {
-                "src": "projects/funnybones/funny-bones.png",
-                "title": "Hitman 47 bone model"
-              }, {
-                "src": "projects/funnybones/funny-bones-2.png",
-                "title": "Bridge model"
-              }
-            ]
-        }
-      }, {
-        "title": "Flying Carpet",
-        "year": "2010",
-        "description": {
-          "short": "Simple Arduino controlled game",
-          "long": "The Flying Carpet game was made for the course '3D Prototyping' on the IT programme at the University of Aarhus. Its purpose was to provide a simple game that could be controlled by a physical controller device using sensors attached to an Arduino board.</p><p>See <a href='https://sites.google.com/site/flyingcarpetsim/'>project website</a>"
-        },
-        "resources": {
-          "videos": [
-            {
-              "vimeo_id": "16502098"
+    "projects": [
+        {
+            "title": "Train of Thought",
+            "year": "2014",
+            "description": {
+                "short": "Colourful and action-packed word game for Ludum Dare 31",
+                "long": "<p>Type words to create a railway track to the terminating station. But hurry before the train departs!</p><p><a href='http://ludumdare.com/compo/ludum-dare-31/?action=preview&uid=30512'>Ludum Dare game page</a></p>"
+            },
+            "resources": {
+                "pictures": [
+                    {
+                        "src": "projects/train_of_thought/train_of_thought1.png",
+                        "title": "Title screen",
+                        "x": 958,
+                        "y": 636
+                    },
+                    {
+                        "src": "projects/train_of_thought/train_of_thought2.jpg",
+                        "title": "Game screen",
+                        "x": 747,
+                        "y": 500
+                    },
+                    {
+                        "src": "projects/train_of_thought/train_of_thought3.jpg",
+                        "title": "Game over screen",
+                        "x": 761,
+                        "y": 500
+                    }
+                ]
             }
-          ],
-          "pictures": [
-              {
-                "src": "projects/flyingcarpet/screen.jpg",
-                "title": "Collecting diamonds with a flying carpet",
-                "x": 729,
-                "y": 535
-              }
-            ]
-        }
-      }, {
-        "title": "Behavior Tree Workbench",
-        "year": "2010",
-        "description": {
-          "short": "Tool for designing behavior for agents in games",
-          "long": "The 'Behavior Tree Workbench' was my thesis project. The purpose of the workbench is to make it easy and intuitive to design behavior of agents in computer games.</p><p>See <a href='https://sites.google.com/site/behaviortreeeditor'>project website</a>"
         },
-        "resources": {
-          "pictures": [
-              {
-                "src": "projects/behaviortreeditor/workbench.png",
-                "title": "The workbench: Game and behavior tree editor",
-                "x": 1220,
-                "y": 717
-              }, {
-                "src": "projects/behaviortreeditor/scene2.png",
-                "title": "The example game",
-                "x": 600,
-                "y": 302
-              }, {
-                "src": "projects/behaviortreeditor/editor-ui.png",
-                "title": "Behavior tree editor UI",
-                "x": 708,
-                "y": 710
-              }, {
-                "src": "projects/behaviortreeditor/examplescene3.png",
-                "title": "Example of agent behavior",
-                "x": 592,
-                "y": 430
-              }, {
-                "src": "projects/behaviortreeditor/agent.png",
-                "title": "In-game enemy agent",
-                "x": 500,
-                "y": 496
-              }
-            ]
-        }
-      }, {
-        "title": "Sim Shitty MMO",
-        "year": "2009",
-        "description": {
-          "short": "Peer-to-peer online game",
-          "long": "An online game without any central component where all game state is distributed across the participating players. In the game you are a camel and can chat with other camels as well as dropping and picking up pieces of poo."
-        },
-        "resources": {
-          "pictures": [
-              {
-                "src": "projects/simshitty/SimShitty.png",
-                "title": "In-game camel avatars picking up poo"
-              }
-            ]
-        }
-      }, {
-        "title": "Motivation-based Behavior",
-        "year": "2009",
-        "description": {
-          "short": "Evolution simulation",
-          "long": "Experiment using genetics and motivation-based behavior to simulate evolution.</p><p>See <a href='htt//daimi.au.dk/~anissen/motivation'>project website</a>"
-        },
-        "resources": {
-          "videos": [
-            {
-              "vimeo_id": "8399833"
+        {
+            "title": "Dungeon Break",
+            "year": "2014",
+            "description": {
+                "short": "Puzzle game for Ludum Dare 29",
+                "long": "<p>A deranged wizard has trapped you in his magical dungeon deep beneath the ground!</p><p>To escape you need exploit the dungeon itself. Reach the stairs to get to the next level and finally -- to the surface and to freedom!</p><p><a href='http://ludumdare.com/compo/ludum-dare-29/?action=preview&uid=30512'>Ludum Dare game page</a></p>"
+            },
+            "resources": {
+                "pictures": [
+                    {
+                        "src": "projects/dungeon_break/dungeon_break2.jpg",
+                        "title": "Level with obstructions",
+                        "x": 699,
+                        "y": 500
+                    },
+                    {
+                        "src": "projects/dungeon_break/dungeon_break1.jpg",
+                        "title": "Intro screen",
+                        "x": 700,
+                        "y": 500
+                    },
+                    {
+                        "src": "projects/dungeon_break/dungeon_break3.jpg",
+                        "title": "Minimize number of moves used",
+                        "x": 695,
+                        "y": 500
+                    },
+                    {
+                        "src": "projects/dungeon_break/dungeon_break4.jpg",
+                        "title": "Another level",
+                        "x": 699,
+                        "y": 500
+                    }
+                ]
             }
-          ],
-          "pictures": [
-              {
-                "src": "projects/motivation/motivation1.jpg",
-                "title": "Overview of world"
-              }, {
-                "src": "projects/motivation/motivation2.jpg",
-                "title": "Slugs"
-              }, {
-                "src": "projects/motivation/motivation3.jpg",
-                "title": "Slugs"
-              }, {
-                "src": "projects/motivation/motivation4.jpg",
-                "title": "Resting area"
-              }, {
-                "src": "projects/motivation/motivation5.jpg",
-                "title": "Slug path finding"
-              }, {
-                "src": "projects/motivation/motivation6.jpg",
-                "title": "Multitude of slugs with good genes"
-              }
-            ]
-        }
-      }, {
-        "title": "Fluid Simulation",
-        "year": "2009",
-        "description": {
-          "short": "3D offline smoke simulation",
-          "long": "Using fluid dynamics (Euler equations) to calculate the displacement of smoke based on density, buoyancy, wind, gravity, etc.."
         },
-        "resources": {
-          "videos": {
-            "video_show_case": {
-              "vimeo_album_id": "106407"
+        {
+            "title": "You Will Fail",
+            "year": "2013",
+            "description": {
+                "short": "Platformer game for Ludum Dare 28",
+                "long": "<p>An evil entity has invaded Earth.</p><p>You are the last of our defences.</p><p>You have only one life, one Core, one chance.</p><p><a href='http://ludumdare.com/compo/ludum-dare-28/?action=preview&uid=30512'>Ludum Dare game page</a></p>"
+            },
+            "resources": {
+                "pictures": [
+                    {
+                        "src": "projects/you_will_fail/you_will_fail1.jpg",
+                        "title": "The antagonist",
+                        "x": 668,
+                        "y": 500
+                    },
+                    {
+                        "src": "projects/you_will_fail/you_will_fail2.jpg",
+                        "title": "Survive waves of enemies",
+                        "x": 700,
+                        "y": 499
+                    },
+                    {
+                        "src": "projects/you_will_fail/you_will_fail3.jpg",
+                        "title": "Collect coins to get high score",
+                        "x": 696,
+                        "y": 500
+                    }
+                ]
             }
-          },
-          "pictures": [
-              {
-                "src": "projects/fluids/d1.png",
-                "title": "Rising smoke"
-              }, {
-                "src": "projects/fluids/d2.png",
-                "title": "Rising smoke"
-              }, {
-                "src": "projects/fluids/fall35.png",
-                "title": "Falling smoke"
-              }, {
-                "src": "projects/fluids/fall55.png",
-                "title": "Falling smoke"
-              }
-            ]
-        }
-      }, {
-        "title": "Dungeon Simulation",
-        "year": "2009",
-        "description": {
-          "short": "3D dungeon game prototype",
-          "long": "Prototype of a game inspired by Dungeon Keeper where imps carry out orders of their master to maintain an underground dungeon. The dungeon are 3-dimensional and can have multiple levels that the imps nagivate using an A* path finding algorithm."
         },
-        "resources": {
-          "pictures": [
-              {
-                "src": "projects/dungeonsim/Screenshot-DungeonSim-10.png",
-                "title": "Imps in the dungeon",
-                "x": 810,
-                "y": 629
-              }, {
-                "src": "projects/dungeonsim/Screenshot-DungeonSim-9.png",
-                "title": "Imps pathfinding in the dungeon",
-                "x": 810,
-                "y": 629
-              }, {
-                "src": "projects/dungeonsim/Screenshot-DungeonSim-5.png",
-                "title": "Getting from point A to point B",
-                "x": 810,
-                "y": 629
-              }, {
-                "src": "projects/dungeonsim/Screenshot-DungeonSim-12.png",
-                "title": "Ground-level enterance to the dungeon",
-                "x": 810,
-                "y": 629
-              }
-            ]
-        }
-      }, {
-        "title": "Behavior Simulation",
-        "year": "2008",
-        "description": {
-          "short": "Behavior Tree technique for AI",
-          "long": "A demonstration of implementing AI as a Behavior Tree. Behavior trees are used for modelling the daily life of a village of dwarfs."
-        },
-        "resources": {
-          "pictures": [
-              {
-                "src": "projects/behaviorsim/Screenshot-BehaviorSim-1.png",
-                "title": "Units gathering resources",
-                "x": 810,
-                "y": 629
-              }, {
-                "src": "projects/behaviorsim/Screenshot-BehaviorSim.png",
-                "title": "Gold mines, depot, water and home",
-                "x": 810,
-                "y": 629
-              }, {
-                "src": "projects/behaviorsim/Screenshot-BehaviorEditor.png",
-                "title": "Behavior tree execution",
-                "x": 810,
-                "y": 629
-              }
-            ]
-        }
-      }, {
-        "title": "Beaten Traxx",
-        "year": "2008",
-        "description": {
-          "short": "3D tank multiplayer tank gang using OpenEngine",
-          "long": "A collaborative game for demonstrating OpenEngine while adding writing game specific libraries for the engine. The game is a multiplayer tank game where players race around on floating islands, gathering pick-ups and blasting enemies into pierces.</p><p>See <a href='http://www.openengine.dk'>www.openengine.dk</a>"
-        },
-        "resources": {
-          "dir": "beatentraxx",
-          "logo": "bt.png",
-          "videos": [
-            {
-              "vimeo_id": "5050786"
+        {
+            "title": "Merry Christmas",
+            "year": "2012",
+            "description": {
+                "short": "An interactive Christmas card",
+                "long": "A Christmas card that uses verlet integration physics to simulate strings of characters.</p><p>See <a href='http://andersnissen.com/jul/'>project website</a></p><p><a href='https://github.com/anissen/anissen.github.com/tree/master/jul'>Source code</a>"
+            },
+            "resources": {
+                "pictures": [
+                    {
+                        "src": "projects/merrychristmas/godjul.png",
+                        "title": "Strings of characters"
+                    },
+                    {
+                        "src": "projects/merrychristmas/godjul-2.png",
+                        "title": "Remaining characters after shaking the scene"
+                    }
+                ]
             }
-          ],
-          "pictures": [
-              {
-                "src": "projects/beatentraxx/beaten_traxx.jpg",
-                "title": "Beaten Traxx logo",
-                "x": 800,
-                "y": 612
-              }, {
-                "src": "projects/beatentraxx/Screenshot-Prototype-Base-11.jpg",
-                "title": "Bullet physics and particle systems",
-                "x": 1034,
-                "y": 774
-              }, {
-                "src": "projects/beatentraxx/Screenshot-Prototype-Base-12.jpg",
-                "title": "Bullet physics and particle systems",
-                "x": 1034,
-                "y": 774
-              }, {
-                "src": "projects/beatentraxx/Screenshot-Prototype-Base-13.jpg",
-                "title": "Floating islands",
-                "x": 1034,
-                "y": 774
-              }, {
-                "src": "projects/beatentraxx/Screenshot-Prototype-Base-15.jpg",
-                "title": "Floating islands",
-                "x": 1034,
-                "y": 774
-              }, {
-                "src": "projects/beatentraxx/Screenshot-Prototype-Base-16.jpg",
-                "title": "Bullet physics",
-                "x": 1029,
-                "y": 776
-              }
-            ]
-        }
-      }, {
-        "title": "OpenEngine",
-        "year": "2007",
-        "description": {
-          "short": "Modular cross-platform 3D framework",
-          "long": "OpenEngine is a collaborative effort for creating a truely general-purpose cross-platform game engine. The engine began as an engine stub for a game development course at university, but a dedicated group of students continued its development after the course.</p><p>See <a href='http://www.openengine.dk'>www.openengine.dk</a><p>"
         },
-        "resources": {
-          "dir": "openengine",
-          "logo": "oe_logo.jpg",
-          "videos": [
-            {
-              "vimeo_id": "5050786"
+        {
+            "title": "Funny Bones",
+            "year": "2012",
+            "description": {
+                "short": "Web-based rigid body viewer/editor",
+                "long": "Web-based rigid body physics simulator using three.js and verlet integartion.</p><p>See <a href='http://andersnissen.com/funny-bones/app/index-simple.html'>project website</a></p><p><a href='https://github.com/anissen/funny-bones'>Source code</a>"
+            },
+            "resources": {
+                "pictures": [
+                    {
+                        "src": "projects/funnybones/funny-bones.png",
+                        "title": "Hitman 47 bone model"
+                    },
+                    {
+                        "src": "projects/funnybones/funny-bones-2.png",
+                        "title": "Bridge model"
+                    }
+                ]
             }
-          ],
-          "pictures": [
-              {
-                "src": "projects/openengine/oe_logo.jpg",
-                "title": "OpenEngine game: OERacer"
-              }
-            ]
-        }
-      }, {
-        "title": "Rigid Body Editor",
-        "year": "2007",
-        "description": {
-          "short": "3D rigid body editor",
-          "long": "The Rigid Body Editor is a program for editing and simulating physical properties of rigid bodies. The editor allows the user to create particles in space and connect these using some kind of constraints to form bodies with the desired properties. A physics simulation can then be run to test the rigid bodies."
         },
-        "resources": {
-          "dir": "rigidbodyeditor",
-          "logo": "rigidbodyeditor.jpg",
-          "pictures": [
-              {
-                "src": "projects/rigidbodyeditor/rigidbodyeditor.jpg",
-                "title": "Rigid Body Editor interface"
-              }, {
-                "src": "projects/rigidbodyeditor/importGeometry.png",
-                "title": "Importing geometry"
-              }, {
-                "src": "projects/rigidbodyeditor/multipleviewports.png",
-                "title": "Using multiple viewports"
-              }, {
-                "src": "projects/rigidbodyeditor/rbe_logo.jpg",
-                "title": "Building a rigid body ragdoll"
-              }, {
-                "src": "projects/rigidbodyeditor/rigidbody_rendering.png",
-                "title": "Rigid body ragdoll"
-              }, {
-                "src": "projects/rigidbodyeditor/rigidbody_rendering3.png",
-                "title": "Box using standard constraints"
-              }, {
-                "src": "projects/rigidbodyeditor/rigidbody_rendering2.png",
-                "title": "Bridge using standard constraints"
-              }, {
-                "src": "projects/rigidbodyeditor/rigidbody_rendering4.png",
-                "title": "Ragdoll using different types of constraints"
-              }, {
-                "src": "projects/rigidbodyeditor/rigidbody_rendering5.png",
-                "title": "Ragdoll using different types of constraints"
-              }
-            ],
-          "videos": {
-            "video_show_case": {
-              "vimeo_album_id": "96014"
+        {
+            "title": "Flying Carpet",
+            "year": "2010",
+            "description": {
+                "short": "Simple Arduino controlled game",
+                "long": "The Flying Carpet game was made for the course '3D Prototyping' on the IT programme at the University of Aarhus. Its purpose was to provide a simple game that could be controlled by a physical controller device using sensors attached to an Arduino board.</p><p>See <a href='https://sites.google.com/site/flyingcarpetsim/'>project website</a>"
+            },
+            "resources": {
+                "videos": [
+                    {
+                        "vimeo_id": "16502098"
+                    }
+                ],
+                "pictures": [
+                    {
+                        "src": "projects/flyingcarpet/screen.jpg",
+                        "title": "Collecting diamonds with a flying carpet",
+                        "x": 729,
+                        "y": 535
+                    }
+                ]
             }
-          }
-        }
-      }, {
-        "title": "Four Elements",
-        "year": "2007",
-        "description": {
-          "short": "Demonstration of various special effects, especially particles",
-          "long": "Four pedestals stand at the center of a fenced-off site of a meteor crash. On top of each pedestal is one of the four elements; earth, wind, water and fire. These elements can be interacted with, picked up and combined with other elements to create different effects."
         },
-        "resources": {
-          "pictures": [
-              {
-                "src": "projects/fourelements/fourelements.jpg",
-                "title": "The four elements"
-              }, {
-                "src": "projects/fourelements/Fire.png",
-                "title": "Fire element"
-              }, {
-                "src": "projects/fourelements/tree2.jpg",
-                "title": "Earth element"
-              }, {
-                "src": "projects/fourelements/Wind.png",
-                "title": "Wind element"
-              }, {
-                "src": "projects/fourelements/Rain.png",
-                "title": "Water element"
-              }, {
-                "src": "projects/fourelements/solarsystem.jpg",
-                "title": "Solar system"
-              }, {
-                "src": "projects/fourelements/heightmap_trans1.png",
-                "title": "Hightmap terrain"
-              }, {
-                "src": "projects/fourelements/fence2.png",
-                "title": "Fences on terrain"
-              }, {
-                "src": "projects/fourelements/tree1.jpg",
-                "title": "An alternative tree"
-              }
-            ]
-        }
-      }, {
-        "title": "Mosquitoes!",
-        "year": "2007",
-        "description": {
-          "short": "Demo of the Boids algorithm for 3D panorama cinemas",
-          "long": "We used the Boids algorithm to simulate flocks of mosquitoes. Each flock reacts to the other flocks depending on their relationship. Additionally, some tools can affect the behavior of the flocks, e.g. the bloddrop and the mosquito spray. This demo worked in the university 3D panorama cinema."
-        },
-        "resources": {
-          "dir": "myg",
-          "logo": "myg_logo.jpg",
-          "pictures": [
-              {
-                "src": "projects/mosquitoes/flok.jpg",
-                "title": "Flocks of mosquitoes"
-              }, {
-                "src": "projects/mosquitoes/myg-streger.jpg",
-                "title": "A mosquito up close"
-              }, {
-                "src": "projects/mosquitoes/greenCircle.jpg",
-                "title": "Setting up attractors"
-              }, {
-                "src": "projects/mosquitoes/redCirkle.jpg",
-                "title": "Setting up repulsors"
-              }, {
-                "src": "projects/mosquitoes/sprayBig.jpg",
-                "title": "Pulling out the big guns: mosquito spray"
-              }
-            ]
-        }
-      }, {
-        "title": "QuestBoard",
-        "year": "2006",
-        "description": {
-          "short": "HeroQuest-like game framework",
-          "long": "QuestBoard makes it possible to create old-school tile-based board games such as HeroQuest."
-        },
-        "resources": {
-          "dir": "wikiadventure",
-          "logo": "ingame.jpg",
-          "pictures": [
-              {
-                "src": "projects/questboard/questboard_title.jpg",
-                "title": "QuestBoard main screen"
-              }, {
-                "src": "projects/questboard/questboard2.jpg",
-                "title": "Dwarf starting position"
-              }, {
-                "src": "projects/questboard/questboard3.jpg",
-                "title": "Exploring the dungeon"
-              }, {
-                "src": "projects/questboard/questboard4.jpg",
-                "title": "Encountering evil adversaries"
-              }
-            ]
-        }
-      }, {
-        "title": "Ignite",
-        "year": "2006",
-        "description": {
-          "short": "Particle system viewer",
-          "long": "A tool for viewing and modifying particle systems."
-        },
-        "resources": {
-          "dir": "wikiadventure",
-          "logo": "ingame.jpg",
-          "pictures": [
-              {
-                "src": "projects/ignite/ignite1.jpg",
-                "title": "Particle system viewer"
-              }, {
-                "src": "projects/ignite/ignite2.jpg",
-                "title": "Particle system viewer"
-              }
-            ]
-        }
-      }, {
-        "title": "WikiAdventure",
-        "version": "1.0",
-        "year": "2005",
-        "description": {
-          "short": "Wiki-based game framework",
-          "long": "An experimental adventure game framework based on the Wiki principles, where everyone can edit, add and remove contents. The framework is geared toward classic point-and-click adventure games.</p><p>See <a href='http://content.gpwiki.org/index.php/Community_Projects:WikiAdventure'>project page</a>"
-        },
-        "resources": {
-          "dir": "wikiadventure",
-          "logo": "ingame.jpg",
-          "pictures": [
-              {
-                "src": "projects/wikiadventure/WA_Gamelist.jpg",
-                "title": "List of available games"
-              }, {
-                "src": "projects/wikiadventure/WA_Menu_plain.jpg",
-                "title": "Game description screen"
-              }, {
-                "src": "projects/wikiadventure/WA_Loading_plain.jpg",
-                "title": "Loading screen for game download"
-              }, {
-                "src": "projects/wikiadventure/WA_Ingame2.jpg",
-                "title": "Interacting with people"
-              }, {
-                "src": "projects/wikiadventure/WA_Ingame.jpg",
-                "title": "Interacting with people"
-              }, {
-                "src": "projects/wikiadventure/WA_Ingame_plain.jpg",
-                "title": "Example game"
-              }, {
-                "src": "projects/wikiadventure/screen25oe.jpg",
-                "title": "Debug overlay"
-              }, {
-                "src": "projects/wikiadventure/screen69hc.jpg",
-                "title": "Debug overlay w. bounding boxes"
-              }, {
-                "src": "projects/wikiadventure/WA_Loading.jpg",
-                "title": "Custom loading screen"
-              }, {
-                "src": "projects/wikiadventure/WA_Menu.jpg",
-                "title": "Custom game description screen"
-              }
-            ],
-          "videos": [
-            {
-              "vimeo_id": "5050942"
+        {
+            "title": "Behavior Tree Workbench",
+            "year": "2010",
+            "description": {
+                "short": "Tool for designing behavior for agents in games",
+                "long": "The 'Behavior Tree Workbench' was my thesis project. The purpose of the workbench is to make it easy and intuitive to design behavior of agents in computer games.</p><p>See <a href='https://sites.google.com/site/behaviortreeeditor'>project website</a>"
+            },
+            "resources": {
+                "pictures": [
+                    {
+                        "src": "projects/behaviortreeditor/workbench.png",
+                        "title": "The workbench: Game and behavior tree editor",
+                        "x": 1220,
+                        "y": 717
+                    },
+                    {
+                        "src": "projects/behaviortreeditor/scene2.png",
+                        "title": "The example game",
+                        "x": 600,
+                        "y": 302
+                    },
+                    {
+                        "src": "projects/behaviortreeditor/editor-ui.png",
+                        "title": "Behavior tree editor UI",
+                        "x": 708,
+                        "y": 710
+                    },
+                    {
+                        "src": "projects/behaviortreeditor/examplescene3.png",
+                        "title": "Example of agent behavior",
+                        "x": 592,
+                        "y": 430
+                    },
+                    {
+                        "src": "projects/behaviortreeditor/agent.png",
+                        "title": "In-game enemy agent",
+                        "x": 500,
+                        "y": 496
+                    }
+                ]
             }
-          ]
-        }
-      }, {
-        "title": "Meteor Impact",
-        "year": "2004",
-        "description": {
-          "short": "Fast-paced arcade shooter",
-          "long": "Action-packed arcade game in which you are responsible for shooting down meteors before they crash into the Earth. Features lots of different power-ups, a great sound-track and a very retro-feel. Complete game."
         },
-        "resources": {
-          "pictures": [
-              {
-                "src": "projects/meteorimpact/MI_s1.jpg",
-                "title": "Title screen"
-              }, {
-                "src": "projects/meteorimpact/MI_s2.jpg",
-                "title": "Ingame action"
-              }, {
-                "src": "projects/meteorimpact/MI_s3.jpg",
-                "title": "Explosions!"
-              }, {
-                "src": "projects/meteorimpact/MI_s4.jpg",
-                "title": "In trouble"
-              }, {
-                "src": "projects/meteorimpact/MI_s5.jpg",
-                "title": "Bad powerup: Clouds"
-              }, {
-                "src": "projects/meteorimpact/MI_s6.jpg",
-                "title": "High score list"
-              }
-            ]
-        }
-      }, {
-        "title": "AMIS",
-        "year": "2004",
-        "description": {
-          "short": "Tactical game prototype",
-          "long": "Top-down tactical action game prototype inspired by the gameplay in games like Metal Gear Solid. It features path finding, field-of-view and an AI that patrols, hunts a spotted player and alerts other guards."
-        },
-        "resources": {
-          "dir": "amis",
-          "videos": [
-            {
-              "vimeo_id": "8301381"
+        {
+            "title": "Sim Shitty MMO",
+            "year": "2009",
+            "description": {
+                "short": "Peer-to-peer online game",
+                "long": "An online game without any central component where all game state is distributed across the participating players. In the game you are a camel and can chat with other camels as well as dropping and picking up pieces of poo."
+            },
+            "resources": {
+                "pictures": [
+                    {
+                        "src": "projects/simshitty/SimShitty.png",
+                        "title": "In-game camel avatars picking up poo"
+                    }
+                ]
             }
-          ],
-          "pictures": [
-              {
-                "src": "projects/none/logo.jpg",
-                "title": "No screenshots"
-              }
-            ]
+        },
+        {
+            "title": "Motivation-based Behavior",
+            "year": "2009",
+            "description": {
+                "short": "Evolution simulation",
+                "long": "Experiment using genetics and motivation-based behavior to simulate evolution.</p><p>See <a href='htt//daimi.au.dk/~anissen/motivation'>project website</a>"
+            },
+            "resources": {
+                "videos": [
+                    {
+                        "vimeo_id": "8399833"
+                    }
+                ],
+                "pictures": [
+                    {
+                        "src": "projects/motivation/motivation1.jpg",
+                        "title": "Overview of world"
+                    },
+                    {
+                        "src": "projects/motivation/motivation2.jpg",
+                        "title": "Slugs"
+                    },
+                    {
+                        "src": "projects/motivation/motivation3.jpg",
+                        "title": "Slugs"
+                    },
+                    {
+                        "src": "projects/motivation/motivation4.jpg",
+                        "title": "Resting area"
+                    },
+                    {
+                        "src": "projects/motivation/motivation5.jpg",
+                        "title": "Slug path finding"
+                    },
+                    {
+                        "src": "projects/motivation/motivation6.jpg",
+                        "title": "Multitude of slugs with good genes"
+                    }
+                ]
+            }
+        },
+        {
+            "title": "Fluid Simulation",
+            "year": "2009",
+            "description": {
+                "short": "3D offline smoke simulation",
+                "long": "Using fluid dynamics (Euler equations) to calculate the displacement of smoke based on density, buoyancy, wind, gravity, etc.."
+            },
+            "resources": {
+                "videos": [
+                    {
+                        "vimeo_id": "5389824"
+                    }
+                ],
+                "pictures": [
+                    {
+                        "src": "projects/fluids/d1.png",
+                        "title": "Rising smoke"
+                    },
+                    {
+                        "src": "projects/fluids/d2.png",
+                        "title": "Rising smoke"
+                    },
+                    {
+                        "src": "projects/fluids/fall35.png",
+                        "title": "Falling smoke"
+                    },
+                    {
+                        "src": "projects/fluids/fall55.png",
+                        "title": "Falling smoke"
+                    }
+                ]
+            }
+        },
+        {
+            "title": "Dungeon Simulation",
+            "year": "2009",
+            "description": {
+                "short": "3D dungeon game prototype",
+                "long": "Prototype of a game inspired by Dungeon Keeper where imps carry out orders of their master to maintain an underground dungeon. The dungeon are 3-dimensional and can have multiple levels that the imps nagivate using an A* path finding algorithm."
+            },
+            "resources": {
+                "pictures": [
+                    {
+                        "src": "projects/dungeonsim/Screenshot-DungeonSim-10.png",
+                        "title": "Imps in the dungeon",
+                        "x": 810,
+                        "y": 629
+                    },
+                    {
+                        "src": "projects/dungeonsim/Screenshot-DungeonSim-9.png",
+                        "title": "Imps pathfinding in the dungeon",
+                        "x": 810,
+                        "y": 629
+                    },
+                    {
+                        "src": "projects/dungeonsim/Screenshot-DungeonSim-5.png",
+                        "title": "Getting from point A to point B",
+                        "x": 810,
+                        "y": 629
+                    },
+                    {
+                        "src": "projects/dungeonsim/Screenshot-DungeonSim-12.png",
+                        "title": "Ground-level enterance to the dungeon",
+                        "x": 810,
+                        "y": 629
+                    }
+                ]
+            }
+        },
+        {
+            "title": "Behavior Simulation",
+            "year": "2008",
+            "description": {
+                "short": "Behavior Tree technique for AI",
+                "long": "A demonstration of implementing AI as a Behavior Tree. Behavior trees are used for modelling the daily life of a village of dwarfs."
+            },
+            "resources": {
+                "pictures": [
+                    {
+                        "src": "projects/behaviorsim/Screenshot-BehaviorSim-1.png",
+                        "title": "Units gathering resources",
+                        "x": 810,
+                        "y": 629
+                    },
+                    {
+                        "src": "projects/behaviorsim/Screenshot-BehaviorSim.png",
+                        "title": "Gold mines, depot, water and home",
+                        "x": 810,
+                        "y": 629
+                    },
+                    {
+                        "src": "projects/behaviorsim/Screenshot-BehaviorEditor.png",
+                        "title": "Behavior tree execution",
+                        "x": 810,
+                        "y": 629
+                    }
+                ]
+            }
+        },
+        {
+            "title": "Beaten Traxx",
+            "year": "2008",
+            "description": {
+                "short": "3D tank multiplayer tank gang using OpenEngine",
+                "long": "A collaborative game for demonstrating OpenEngine while adding writing game specific libraries for the engine. The game is a multiplayer tank game where players race around on floating islands, gathering pick-ups and blasting enemies into pierces.</p><p>See <a href='http://www.openengine.dk'>www.openengine.dk</a>"
+            },
+            "resources": {
+                "dir": "beatentraxx",
+                "logo": "bt.png",
+                "videos": [
+                    {
+                        "vimeo_id": "5050786"
+                    }
+                ],
+                "pictures": [
+                    {
+                        "src": "projects/beatentraxx/beaten_traxx.jpg",
+                        "title": "Beaten Traxx logo",
+                        "x": 800,
+                        "y": 612
+                    },
+                    {
+                        "src": "projects/beatentraxx/Screenshot-Prototype-Base-11.jpg",
+                        "title": "Bullet physics and particle systems",
+                        "x": 1034,
+                        "y": 774
+                    },
+                    {
+                        "src": "projects/beatentraxx/Screenshot-Prototype-Base-12.jpg",
+                        "title": "Bullet physics and particle systems",
+                        "x": 1034,
+                        "y": 774
+                    },
+                    {
+                        "src": "projects/beatentraxx/Screenshot-Prototype-Base-13.jpg",
+                        "title": "Floating islands",
+                        "x": 1034,
+                        "y": 774
+                    },
+                    {
+                        "src": "projects/beatentraxx/Screenshot-Prototype-Base-15.jpg",
+                        "title": "Floating islands",
+                        "x": 1034,
+                        "y": 774
+                    },
+                    {
+                        "src": "projects/beatentraxx/Screenshot-Prototype-Base-16.jpg",
+                        "title": "Bullet physics",
+                        "x": 1029,
+                        "y": 776
+                    }
+                ]
+            }
+        },
+        {
+            "title": "OpenEngine",
+            "year": "2007",
+            "description": {
+                "short": "Modular cross-platform 3D framework",
+                "long": "OpenEngine is a collaborative effort for creating a truely general-purpose cross-platform game engine. The engine began as an engine stub for a game development course at university, but a dedicated group of students continued its development after the course.</p><p>See <a href='http://www.openengine.dk'>www.openengine.dk</a><p>"
+            },
+            "resources": {
+                "dir": "openengine",
+                "logo": "oe_logo.jpg",
+                "videos": [
+                    {
+                        "vimeo_id": "5050786"
+                    }
+                ],
+                "pictures": [
+                    {
+                        "src": "projects/openengine/oe_logo.jpg",
+                        "title": "OpenEngine game: OERacer"
+                    }
+                ]
+            }
+        },
+        {
+            "title": "Rigid Body Editor",
+            "year": "2007",
+            "description": {
+                "short": "3D rigid body editor",
+                "long": "The Rigid Body Editor is a program for editing and simulating physical properties of rigid bodies. The editor allows the user to create particles in space and connect these using some kind of constraints to form bodies with the desired properties. A physics simulation can then be run to test the rigid bodies."
+            },
+            "resources": {
+                "dir": "rigidbodyeditor",
+                "logo": "rigidbodyeditor.jpg",
+                "pictures": [
+                    {
+                        "src": "projects/rigidbodyeditor/rigidbodyeditor.jpg",
+                        "title": "Rigid Body Editor interface"
+                    },
+                    {
+                        "src": "projects/rigidbodyeditor/importGeometry.png",
+                        "title": "Importing geometry"
+                    },
+                    {
+                        "src": "projects/rigidbodyeditor/multipleviewports.png",
+                        "title": "Using multiple viewports"
+                    },
+                    {
+                        "src": "projects/rigidbodyeditor/rbe_logo.jpg",
+                        "title": "Building a rigid body ragdoll"
+                    },
+                    {
+                        "src": "projects/rigidbodyeditor/rigidbody_rendering.png",
+                        "title": "Rigid body ragdoll"
+                    },
+                    {
+                        "src": "projects/rigidbodyeditor/rigidbody_rendering3.png",
+                        "title": "Box using standard constraints"
+                    },
+                    {
+                        "src": "projects/rigidbodyeditor/rigidbody_rendering2.png",
+                        "title": "Bridge using standard constraints"
+                    },
+                    {
+                        "src": "projects/rigidbodyeditor/rigidbody_rendering4.png",
+                        "title": "Ragdoll using different types of constraints"
+                    },
+                    {
+                        "src": "projects/rigidbodyeditor/rigidbody_rendering5.png",
+                        "title": "Ragdoll using different types of constraints"
+                    }
+                ],
+                "videos": {
+                    "video_show_case": {
+                        "vimeo_album_id": "96014"
+                    }
+                }
+            }
+        },
+        {
+            "title": "Four Elements",
+            "year": "2007",
+            "description": {
+                "short": "Demonstration of various special effects, especially particles",
+                "long": "Four pedestals stand at the center of a fenced-off site of a meteor crash. On top of each pedestal is one of the four elements; earth, wind, water and fire. These elements can be interacted with, picked up and combined with other elements to create different effects."
+            },
+            "resources": {
+                "pictures": [
+                    {
+                        "src": "projects/fourelements/fourelements.jpg",
+                        "title": "The four elements"
+                    },
+                    {
+                        "src": "projects/fourelements/Fire.png",
+                        "title": "Fire element"
+                    },
+                    {
+                        "src": "projects/fourelements/tree2.jpg",
+                        "title": "Earth element"
+                    },
+                    {
+                        "src": "projects/fourelements/Wind.png",
+                        "title": "Wind element"
+                    },
+                    {
+                        "src": "projects/fourelements/Rain.png",
+                        "title": "Water element"
+                    },
+                    {
+                        "src": "projects/fourelements/solarsystem.jpg",
+                        "title": "Solar system"
+                    },
+                    {
+                        "src": "projects/fourelements/heightmap_trans1.png",
+                        "title": "Hightmap terrain"
+                    },
+                    {
+                        "src": "projects/fourelements/fence2.png",
+                        "title": "Fences on terrain"
+                    },
+                    {
+                        "src": "projects/fourelements/tree1.jpg",
+                        "title": "An alternative tree"
+                    }
+                ]
+            }
+        },
+        {
+            "title": "Mosquitoes!",
+            "year": "2007",
+            "description": {
+                "short": "Demo of the Boids algorithm for 3D panorama cinemas",
+                "long": "We used the Boids algorithm to simulate flocks of mosquitoes. Each flock reacts to the other flocks depending on their relationship. Additionally, some tools can affect the behavior of the flocks, e.g. the bloddrop and the mosquito spray. This demo worked in the university 3D panorama cinema."
+            },
+            "resources": {
+                "dir": "myg",
+                "logo": "myg_logo.jpg",
+                "pictures": [
+                    {
+                        "src": "projects/mosquitoes/flok.jpg",
+                        "title": "Flocks of mosquitoes"
+                    },
+                    {
+                        "src": "projects/mosquitoes/myg-streger.jpg",
+                        "title": "A mosquito up close"
+                    },
+                    {
+                        "src": "projects/mosquitoes/greenCircle.jpg",
+                        "title": "Setting up attractors"
+                    },
+                    {
+                        "src": "projects/mosquitoes/redCirkle.jpg",
+                        "title": "Setting up repulsors"
+                    },
+                    {
+                        "src": "projects/mosquitoes/sprayBig.jpg",
+                        "title": "Pulling out the big guns: mosquito spray"
+                    }
+                ]
+            }
+        },
+        {
+            "title": "QuestBoard",
+            "year": "2006",
+            "description": {
+                "short": "HeroQuest-like game framework",
+                "long": "QuestBoard makes it possible to create old-school tile-based board games such as HeroQuest."
+            },
+            "resources": {
+                "dir": "wikiadventure",
+                "logo": "ingame.jpg",
+                "pictures": [
+                    {
+                        "src": "projects/questboard/questboard_title.jpg",
+                        "title": "QuestBoard main screen"
+                    },
+                    {
+                        "src": "projects/questboard/questboard2.jpg",
+                        "title": "Dwarf starting position"
+                    },
+                    {
+                        "src": "projects/questboard/questboard3.jpg",
+                        "title": "Exploring the dungeon"
+                    },
+                    {
+                        "src": "projects/questboard/questboard4.jpg",
+                        "title": "Encountering evil adversaries"
+                    }
+                ]
+            }
+        },
+        {
+            "title": "Ignite",
+            "year": "2006",
+            "description": {
+                "short": "Particle system viewer",
+                "long": "A tool for viewing and modifying particle systems."
+            },
+            "resources": {
+                "dir": "wikiadventure",
+                "logo": "ingame.jpg",
+                "pictures": [
+                    {
+                        "src": "projects/ignite/ignite1.jpg",
+                        "title": "Particle system viewer"
+                    },
+                    {
+                        "src": "projects/ignite/ignite2.jpg",
+                        "title": "Particle system viewer"
+                    }
+                ]
+            }
+        },
+        {
+            "title": "WikiAdventure",
+            "version": "1.0",
+            "year": "2005",
+            "description": {
+                "short": "Wiki-based game framework",
+                "long": "An experimental adventure game framework based on the Wiki principles, where everyone can edit, add and remove contents. The framework is geared toward classic point-and-click adventure games.</p><p>See <a href='http://content.gpwiki.org/index.php/Community_Projects:WikiAdventure'>project page</a>"
+            },
+            "resources": {
+                "dir": "wikiadventure",
+                "logo": "ingame.jpg",
+                "pictures": [
+                    {
+                        "src": "projects/wikiadventure/WA_Gamelist.jpg",
+                        "title": "List of available games"
+                    },
+                    {
+                        "src": "projects/wikiadventure/WA_Menu_plain.jpg",
+                        "title": "Game description screen"
+                    },
+                    {
+                        "src": "projects/wikiadventure/WA_Loading_plain.jpg",
+                        "title": "Loading screen for game download"
+                    },
+                    {
+                        "src": "projects/wikiadventure/WA_Ingame2.jpg",
+                        "title": "Interacting with people"
+                    },
+                    {
+                        "src": "projects/wikiadventure/WA_Ingame.jpg",
+                        "title": "Interacting with people"
+                    },
+                    {
+                        "src": "projects/wikiadventure/WA_Ingame_plain.jpg",
+                        "title": "Example game"
+                    },
+                    {
+                        "src": "projects/wikiadventure/screen25oe.jpg",
+                        "title": "Debug overlay"
+                    },
+                    {
+                        "src": "projects/wikiadventure/screen69hc.jpg",
+                        "title": "Debug overlay w. bounding boxes"
+                    },
+                    {
+                        "src": "projects/wikiadventure/WA_Loading.jpg",
+                        "title": "Custom loading screen"
+                    },
+                    {
+                        "src": "projects/wikiadventure/WA_Menu.jpg",
+                        "title": "Custom game description screen"
+                    }
+                ],
+                "videos": [
+                    {
+                        "vimeo_id": "5050942"
+                    }
+                ]
+            }
+        },
+        {
+            "title": "Meteor Impact",
+            "year": "2004",
+            "description": {
+                "short": "Fast-paced arcade shooter",
+                "long": "Action-packed arcade game in which you are responsible for shooting down meteors before they crash into the Earth. Features lots of different power-ups, a great sound-track and a very retro-feel. Complete game."
+            },
+            "resources": {
+                "pictures": [
+                    {
+                        "src": "projects/meteorimpact/MI_s1.jpg",
+                        "title": "Title screen"
+                    },
+                    {
+                        "src": "projects/meteorimpact/MI_s2.jpg",
+                        "title": "Ingame action"
+                    },
+                    {
+                        "src": "projects/meteorimpact/MI_s3.jpg",
+                        "title": "Explosions!"
+                    },
+                    {
+                        "src": "projects/meteorimpact/MI_s4.jpg",
+                        "title": "In trouble"
+                    },
+                    {
+                        "src": "projects/meteorimpact/MI_s5.jpg",
+                        "title": "Bad powerup: Clouds"
+                    },
+                    {
+                        "src": "projects/meteorimpact/MI_s6.jpg",
+                        "title": "High score list"
+                    }
+                ]
+            }
+        },
+        {
+            "title": "AMIS",
+            "year": "2004",
+            "description": {
+                "short": "Tactical game prototype",
+                "long": "Top-down tactical action game prototype inspired by the gameplay in games like Metal Gear Solid. It features path finding, field-of-view and an AI that patrols, hunts a spotted player and alerts other guards."
+            },
+            "resources": {
+                "dir": "amis",
+                "videos": [
+                    {
+                        "vimeo_id": "8301381"
+                    }
+                ],
+                "pictures": [
+                    {
+                        "src": "projects/none/logo.jpg",
+                        "title": "No screenshots"
+                    }
+                ]
+            }
         }
-      }
     ]
-  }
+}
