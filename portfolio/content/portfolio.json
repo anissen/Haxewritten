@@ -1,6 +1,42 @@
 {
     "projects": [
         {
+            "title": "Monster's Ball",
+            "year": "2015",
+            "description": {
+                "short": "Peggle-inspired game for Ludum Dare 33",
+                "long": "<p>Welcome to Monster's Ball! Monster's Ball is the monsters favorite pasttime when coming home from a long day of scaring children.</p><p><a href='http://ludumdare.com/compo/ludum-dare-33/?action=preview&uid=30512'>Ludum Dare game page</a></p>"
+            },
+            "resources": {
+                "pictures": [
+                    {
+                        "src": "projects/monsters_ball/monsters_ball1.png",
+                        "title": "Title screen",
+                        "x": 766,
+                        "y": 500
+                    },
+                    {
+                        "src": "projects/monsters_ball/monsters_ball2.jpg",
+                        "title": "Relaxing ball bouncing",
+                        "x": 757,
+                        "y": 500
+                    },
+                    {
+                        "src": "projects/monsters_ball/monsters_ball3.jpg",
+                        "title": "Get combos",
+                        "x": 753,
+                        "y": 500
+                    },
+                    {
+                        "src": "projects/monsters_ball/monsters_ball3.jpg",
+                        "title": "",
+                        "x": 750,
+                        "y": 500
+                    }
+                ]
+            }
+        },
+        {
             "title": "Train of Thought",
             "year": "2014",
             "description": {
