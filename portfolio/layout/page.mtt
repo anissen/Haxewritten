@@ -54,6 +54,10 @@
         ::foreach video resources.videos::
             ::if video.vimeo_id != null::
             <div data-type="vimeo" data-video-id="::video.vimeo_id::"></div>
+            ::elseif video.raw != null::
+            <video controls="true">
+              <source src="./../::video.raw::" type="video/::video.raw.split('.')[1]::" />
+            </video>
             ::end::
         ::end::
         </div>

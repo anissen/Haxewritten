@@ -1,6 +1,53 @@
 {
     "projects": [
         {
+            "title": "Geometry Ninja",
+            "year": "2016",
+            "description": {
+                "short": "Fruit Ninja-inspired action game for Ludum Dare 35",
+                "long": "<p>Slice geometry in evenly sized pieces in an ever-increasing rush against time.</p><p><a href='http://ludumdare.com/compo/ludum-dare-35/?action=preview&uid=30512'>Ludum Dare game page</a></p>"
+            },
+            "resources": {
+                "videos": [
+                    {
+                        "raw": "projects/geometry_ninja/geometry_ninja.webm"
+                    }
+                ],
+                "pictures": [
+                    {
+                        "src": "projects/geometry_ninja/title.png",
+                        "title": "Title screen",
+                        "x": 645,
+                        "y": 582
+                    },
+                    {
+                        "src": "projects/geometry_ninja/how_to.png",
+                        "title": "How to play",
+                        "x": 649,
+                        "y": 578
+                    },
+                    {
+                        "src": "projects/geometry_ninja/cut.png",
+                        "title": "Cut geometry",
+                        "x": 644,
+                        "y": 579
+                    },
+                    {
+                        "src": "projects/geometry_ninja/percent.png",
+                        "title": "Earn points by percise cuts",
+                        "x": 648,
+                        "y": 580
+                    },
+                    {
+                        "src": "projects/geometry_ninja/game_over.png",
+                        "title": "Game over",
+                        "x": 641,
+                        "y": 578
+                    }
+                ]
+            }
+        },
+        {
             "title": "A Life in a Year",
             "year": "2015",
             "description": {
@@ -8,18 +55,17 @@
                 "long": "<p>A small game about life and death.</p><p>You guide a young tree in its first year of life. Each season is more ªdemanding that the last. Collect items to grow and prosper.</p><p><a href='http://ludumdare.com/compo/ludum-dare-34/?action=preview&uid=30512'>Ludum Dare game page</a></p>"
             },
             "resources": {
+                "videos": [
+                    {
+                        "raw": "projects/a_life_in_a_year/a_life_in_a_year.webm"
+                    }
+                ],
                 "pictures": [
                     {
                         "src": "projects/a_life_in_a_year/a_life_in_a_year1.jpg",
                         "title": "Title screen",
                         "x": 500,
                         "y": 500
-                    },
-                    {
-                        "src": "projects/a_life_in_a_year/a_life_in_a_year_small.gif",
-                        "title": "Gameplay",
-                        "x": 260,
-                        "y": 260
                     },
                     {
                         "src": "projects/a_life_in_a_year/a_life_in_a_year2.jpg",
@@ -34,7 +80,7 @@
                         "y": 500
                     },
                     {
-                        "src": "projects/a_life_in_a_year/a_life_in_a_year3.jpg",
+                        "src": "projects/a_life_in_a_year/a_life_in_a_year4.jpg",
                         "title": "Avoid poison",
                         "x": 500,
                         "y": 500
