@@ -1,6 +1,48 @@
 {
     "projects": [
         {
+            "title": "A Life in a Year",
+            "year": "2015",
+            "description": {
+                "short": "Tree-growing game for Ludum Dare 34",
+                "long": "<p>A small game about life and death.</p><p>You guide a young tree in its first year of life. Each season is more ªdemanding that the last. Collect items to grow and prosper.</p><p><a href='http://ludumdare.com/compo/ludum-dare-34/?action=preview&uid=30512'>Ludum Dare game page</a></p>"
+            },
+            "resources": {
+                "pictures": [
+                    {
+                        "src": "projects/a_life_in_a_year/a_life_in_a_year1.jpg",
+                        "title": "Title screen",
+                        "x": 500,
+                        "y": 500
+                    },
+                    {
+                        "src": "projects/a_life_in_a_year/a_life_in_a_year_small.gif",
+                        "title": "Gameplay",
+                        "x": 260,
+                        "y": 260
+                    },
+                    {
+                        "src": "projects/a_life_in_a_year/a_life_in_a_year2.jpg",
+                        "title": "Seasons",
+                        "x": 500,
+                        "y": 500
+                    },
+                    {
+                        "src": "projects/a_life_in_a_year/a_life_in_a_year3.jpg",
+                        "title": "Collect sun and rain drops",
+                        "x": 500,
+                        "y": 500
+                    },
+                    {
+                        "src": "projects/a_life_in_a_year/a_life_in_a_year3.jpg",
+                        "title": "Avoid poison",
+                        "x": 500,
+                        "y": 500
+                    }
+                ]
+            }
+        },
+        {
             "title": "Monster's Ball",
             "year": "2015",
             "description": {
