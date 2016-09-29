@@ -191,6 +191,53 @@
             }
         },
         {
+            "title": "Rescue Rush",
+            "year": "2014",
+            "description": {
+                "short": "How many patients can you rescue?",
+                "long": "<p>Rescue as many patients as possible! Works best with touch on a tablet device.</p><p><a href='http://andersnissen.com/rush/'>Link</a></p>"
+            },
+            "resources": {
+                "videos": [
+                    {
+                        "raw": "projects/rescue_rush/rescue_rush.webm"
+                    }
+                ],
+                "pictures": [
+                    {
+                        "src": "projects/rescue_rush/rescue_rush1.png",
+                        "title": "Title screen",
+                        "x": 1022,
+                        "y": 740
+                    },
+                    {
+                        "src": "projects/rescue_rush/rescue_rush2.png",
+                        "title": "How to play",
+                        "x": 1019,
+                        "y": 739
+                    },
+                    {
+                        "src": "projects/rescue_rush/rescue_rush3.png",
+                        "title": "Rescue patients",
+                        "x": 1013,
+                        "y": 701
+                    },
+                    {
+                        "src": "projects/rescue_rush/rescue_rush4.png",
+                        "title": "Coordinate multiple ambulances",
+                        "x": 1035,
+                        "y": 740
+                    },
+                    {
+                        "src": "projects/rescue_rush/rescue_rush5.png",
+                        "title": "Tackle the increasing rush",
+                        "x": 1056,
+                        "y": 741
+                    }
+                ]
+            }
+        },
+        {
             "title": "You Will Fail",
             "year": "2013",
             "description": {
