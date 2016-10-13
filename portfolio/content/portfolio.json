@@ -162,6 +162,11 @@
                 "long": "<p>A deranged wizard has trapped you in his magical dungeon deep beneath the ground!</p><p>To escape you need exploit the dungeon itself. Reach the stairs to get to the next level and finally -- to the surface and to freedom!</p><p><a href='http://ludumdare.com/compo/ludum-dare-29/?action=preview&uid=30512'>Ludum Dare game page</a></p>"
             },
             "resources": {
+                "videos": [
+                    {
+                        "raw": "projects/dungeon_break/dungeon_break.mp4"
+                    }
+                ],
                 "pictures": [
                     {
                         "src": "projects/dungeon_break/dungeon_break2.jpg",
