@@ -1,5 +1,6 @@
 <link rel="stylesheet" type="text/css" href="../include/css/collage.css" />
 <link rel="stylesheet" type="text/css" href="../include/css/figures.css" />
+<link rel="stylesheet" type="text/css" href="../include/css/label.css" />
 
 
 
@@ -11,14 +12,13 @@
 <div class="ui segment">
   <h2>Effects! :)</h2>
 
-    <div class="Collage effect-parent rotate_zoom shiny"><!-- rotate_zoom shiny -->
+    <div class="Collage effect-parent rotate_zoom"><!-- rotate_zoom shiny -->
     ::foreach project projects::
-        <div class="Image_Wrapper" data-caption="This is some data <u>with</u> html in it">
       <a href="../pages/::project.filename::">
-    <effect>
-        <img src="./../::project.resources.pictures[0].src::" /></effect>
+        <effect class="label inside float middle" data-label="::project.title::">
+            <img src="./../::project.resources.pictures[0].src::" />
+        </effect>
       </a>
-      </div>
     ::end::
     </div>
       

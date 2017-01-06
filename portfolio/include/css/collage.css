@@ -29,14 +29,40 @@
 }
 
 .Caption{
-    font-size:18px;
+    font-size: 18px;
     /*font-weight:normal;
     font-family:arial;*/
+   
 }
-.Caption_Content{
+.Caption_Content {
     /* padding:10px; */
-    color:#FFF;
-    padding:20px;
+    color: #FFF;
+    /*padding: 20px;*/
+    height: 50%;
+    width: 50%;
+
+    margin: 0;
+    background: yellow;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Caption_New {
+    height: 50%;
+    width: 50%;
+
+    margin: 0;
+    background: yellow;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+effect.label {
+    font-size: 36px;
 }
 
 /* from transitions.css */
