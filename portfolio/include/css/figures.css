@@ -1,50 +1,45 @@
-figure {
-  width: 100%;
-  /*width: 300px;
-  height: 200px;*/
-  margin: 0;
-  padding: 0;
-  /*background: #fff;*/
-  overflow: hidden;
+effect {
+    overflow: hidden;
 }
 
-figure:hover+span {
+effect:hover+span {
   /*bottom: -36px;*/
   /*opacity: 1;*/
 }
 
 /* Rotate */
-.rotate_zoom figure img {
-  -webkit-transform: rotate(5deg) scale(1.2);
-  transform: rotate(5deg) scale(1.2);
+.rotate_zoom effect img {
+    -webkit-transform: rotate(3deg) scale(1.2);
+  transform: rotate(3deg) scale(1.2);
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
+}
+.rotate_zoom effect:hover img {
+  
+    -webkit-transform: rotate(0) scale(1);
+    transform: rotate(0) scale(1);
   /*-webkit-transform: rotate(0) scale(1);
   transform: rotate(0) scale(1);*/
 }
-.rotate_zoom figure:hover img {
-  -webkit-transform: rotate(0) scale(1);
-  transform: rotate(0) scale(1);
-}
 
 /* Opacity #2 */
-.color_overlay figure {
+.color_overlay effect {
   background: red;
 }
-.color_overlay figure img {
+.color_overlay effect img {
   opacity: .6;
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
 }
-.color_overlay figure:hover img {
+.color_overlay effect:hover img {
   opacity: 1;
 }
 
 /* Shine */
-.shiny figure {
+.shiny effect {
   position: relative;
 }
-.shiny figure::before {
+.shiny effect::before {
   position: absolute;
   top: 0;
   left: -75%;
@@ -58,7 +53,7 @@ figure:hover+span {
   -webkit-transform: skewX(-25deg);
   transform: skewX(-25deg);
 }
-.shiny figure:hover::before {
+.shiny effect:hover::before {
   -webkit-animation: shine .5s;
   animation: shine .5s;
 }
