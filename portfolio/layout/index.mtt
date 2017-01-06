@@ -12,6 +12,9 @@
 <div class="ui segment">
   <h2>Effects! :)</h2>
 
+  <div class="ui middle aligned stackable grid container">
+    <div class="row">
+        <div class="center aligned column">
     <div class="Collage effect-parent rotate_zoom"><!-- rotate_zoom shiny -->
     ::foreach project projects::
       <a href="../pages/::project.filename::">
@@ -21,6 +24,11 @@
       </a>
     ::end::
     </div>
+
+
+    </div>
+    </div>
+  </div>
       
   ::raw content::
 
