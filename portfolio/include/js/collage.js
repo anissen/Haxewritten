@@ -17,7 +17,7 @@ $(window).load(function(){
 
     (function(a){a.fn.removeWhitespace=function(){this.contents().filter(function(){return this.nodeType==3&&!/\S/.test(this.nodeValue)}).remove();return this}})(jQuery);
 
-
+function collage() {
     $('.Collage').removeWhitespace().collagePlus(
         {
             'fadeSpeed'     : 2000,
@@ -27,7 +27,8 @@ $(window).load(function(){
             'allowPartialLastRow' : true
         }
     );
-});
+}
+collage();
 
 // This is just for the case that the browser window is resized
 var resizeTimer = null;
@@ -37,4 +38,5 @@ $(window).bind('resize', function() {
     // set a timer to re-apply the plugin
     if (resizeTimer) clearTimeout(resizeTimer);
     resizeTimer = setTimeout(collage, 200);
+});
 });

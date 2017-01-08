@@ -17,5 +17,6 @@ class Main {
 
         // create index
         Generator.output_page({ projects: projects }, 'portfolio/layout/index.mtt', 'portfolio/index/index.html');
+        Generator.output_page({ projects: projects }, 'portfolio/layout/home.mtt', 'portfolio/index/home.html');
     }
 }
