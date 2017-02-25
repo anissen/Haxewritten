@@ -677,39 +677,57 @@
                 "pictures": [
                     {
                         "src": "projects/fourelements/fourelements.jpg",
-                        "title": "The four elements"
+                        "title": "The four elements",
+                        "x": 600,
+                        "y": 570
                     },
                     {
                         "src": "projects/fourelements/Fire.png",
-                        "title": "Fire element"
+                        "title": "Fire element",
+                        "x": 808,
+                        "y": 829
                     },
                     {
                         "src": "projects/fourelements/tree2.jpg",
-                        "title": "Earth element"
+                        "title": "Earth element",
+                        "x": 340,
+                        "y": 314
                     },
                     {
                         "src": "projects/fourelements/Wind.png",
-                        "title": "Wind element"
+                        "title": "Wind element",
+                        "x": 808,
+                        "y": 829
                     },
                     {
                         "src": "projects/fourelements/Rain.png",
-                        "title": "Water element"
+                        "title": "Water element",
+                        "x": 808,
+                        "y": 829
                     },
                     {
                         "src": "projects/fourelements/solarsystem.jpg",
-                        "title": "Solar system"
+                        "title": "Solar system",
+                        "x": 607,
+                        "y": 623
                     },
                     {
                         "src": "projects/fourelements/heightmap_trans1.png",
-                        "title": "Hightmap terrain"
+                        "title": "Hightmap terrain",
+                        "x": 790,
+                        "y": 790
                     },
                     {
                         "src": "projects/fourelements/fence2.png",
-                        "title": "Fences on terrain"
+                        "title": "Fences on terrain",
+                        "x": 939,
+                        "y": 446
                     },
                     {
                         "src": "projects/fourelements/tree1.jpg",
-                        "title": "An alternative tree"
+                        "title": "An alternative tree",
+                        "x": 342,
+                        "y": 315
                     }
                 ]
             }
@@ -727,23 +745,33 @@
                 "pictures": [
                     {
                         "src": "projects/mosquitoes/flok.jpg",
-                        "title": "Flocks of mosquitoes"
+                        "title": "Flocks of mosquitoes",
+                        "x": 490,
+                        "y": 325
                     },
                     {
                         "src": "projects/mosquitoes/myg-streger.jpg",
-                        "title": "A mosquito up close"
+                        "title": "A mosquito up close",
+                        "x": 490,
+                        "y": 326
                     },
                     {
                         "src": "projects/mosquitoes/greenCircle.jpg",
-                        "title": "Setting up attractors"
+                        "title": "Setting up attractors",
+                        "x": 490,
+                        "y": 327
                     },
                     {
                         "src": "projects/mosquitoes/redCirkle.jpg",
-                        "title": "Setting up repulsors"
+                        "title": "Setting up repulsors",
+                        "x": 490,
+                        "y": 326
                     },
                     {
                         "src": "projects/mosquitoes/sprayBig.jpg",
-                        "title": "Pulling out the big guns: mosquito spray"
+                        "title": "Pulling out the big guns: mosquito spray",
+                        "x": 490,
+                        "y": 326
                     }
                 ]
             }
@@ -756,24 +784,32 @@
                 "long": "QuestBoard makes it possible to create old-school tile-based board games such as HeroQuest."
             },
             "resources": {
-                "dir": "wikiadventure",
+                "dir": "questboard",
                 "logo": "ingame.jpg",
                 "pictures": [
                     {
                         "src": "projects/questboard/questboard_title.jpg",
-                        "title": "QuestBoard main screen"
+                        "title": "QuestBoard main screen",
+                        "x": 401,
+                        "y": 401
                     },
                     {
                         "src": "projects/questboard/questboard2.jpg",
-                        "title": "Dwarf starting position"
+                        "title": "Dwarf starting position",
+                        "x": 402,
+                        "y": 402
                     },
                     {
                         "src": "projects/questboard/questboard3.jpg",
-                        "title": "Exploring the dungeon"
+                        "title": "Exploring the dungeon",
+                        "x": 400,
+                        "y": 402
                     },
                     {
                         "src": "projects/questboard/questboard4.jpg",
-                        "title": "Encountering evil adversaries"
+                        "title": "Encountering evil adversaries",
+                        "x": 400,
+                        "y": 402
                     }
                 ]
             }
@@ -791,11 +827,15 @@
                 "pictures": [
                     {
                         "src": "projects/ignite/ignite1.jpg",
-                        "title": "Particle system viewer"
+                        "title": "Particle system viewer",
+                        "x": 816,
+                        "y": 638
                     },
                     {
                         "src": "projects/ignite/ignite2.jpg",
-                        "title": "Particle system viewer"
+                        "title": "Particle system viewer",
+                        "x": 816,
+                        "y": 638
                     }
                 ]
             }
@@ -814,43 +854,63 @@
                 "pictures": [
                     {
                         "src": "projects/wikiadventure/WA_Gamelist.jpg",
-                        "title": "List of available games"
+                        "title": "List of available games",
+                        "x": 806,
+                        "y": 632
                     },
                     {
                         "src": "projects/wikiadventure/WA_Menu_plain.jpg",
-                        "title": "Game description screen"
+                        "title": "Game description screen",
+                        "x": 806,
+                        "y": 632
                     },
                     {
                         "src": "projects/wikiadventure/WA_Loading_plain.jpg",
-                        "title": "Loading screen for game download"
+                        "title": "Loading screen for game download",
+                        "x": 806,
+                        "y": 632
                     },
                     {
                         "src": "projects/wikiadventure/WA_Ingame2.jpg",
-                        "title": "Interacting with people"
+                        "title": "Interacting with people",
+                        "x": 806,
+                        "y": 632
                     },
                     {
                         "src": "projects/wikiadventure/WA_Ingame.jpg",
-                        "title": "Interacting with people"
+                        "title": "Interacting with people",
+                        "x": 806,
+                        "y": 632
                     },
                     {
                         "src": "projects/wikiadventure/WA_Ingame_plain.jpg",
-                        "title": "Example game"
+                        "title": "Example game",
+                        "x": 806,
+                        "y": 632
                     },
                     {
                         "src": "projects/wikiadventure/screen25oe.jpg",
-                        "title": "Debug overlay"
+                        "title": "Debug overlay",
+                        "x": 806,
+                        "y": 632
                     },
                     {
                         "src": "projects/wikiadventure/screen69hc.jpg",
-                        "title": "Debug overlay w. bounding boxes"
+                        "title": "Debug overlay w. bounding boxes",
+                        "x": 806,
+                        "y": 632
                     },
                     {
                         "src": "projects/wikiadventure/WA_Loading.jpg",
-                        "title": "Custom loading screen"
+                        "title": "Custom loading screen",
+                        "x": 806,
+                        "y": 632
                     },
                     {
                         "src": "projects/wikiadventure/WA_Menu.jpg",
-                        "title": "Custom game description screen"
+                        "title": "Custom game description screen",
+                        "x": 806,
+                        "y": 632
                     }
                 ],
                 "videos": [
@@ -871,27 +931,39 @@
                 "pictures": [
                     {
                         "src": "projects/meteorimpact/MI_s1.jpg",
-                        "title": "Title screen"
+                        "title": "Title screen",
+                        "x": 520,
+                        "y": 674
                     },
                     {
                         "src": "projects/meteorimpact/MI_s2.jpg",
-                        "title": "Ingame action"
+                        "title": "Ingame action",
+                        "x": 521,
+                        "y": 673
                     },
                     {
                         "src": "projects/meteorimpact/MI_s3.jpg",
-                        "title": "Explosions!"
+                        "title": "Explosions!",
+                        "x": 519,
+                        "y": 672
                     },
                     {
                         "src": "projects/meteorimpact/MI_s4.jpg",
-                        "title": "In trouble"
+                        "title": "In trouble",
+                        "x": 517,
+                        "y": 674
                     },
                     {
                         "src": "projects/meteorimpact/MI_s5.jpg",
-                        "title": "Bad powerup: Clouds"
+                        "title": "Bad powerup: Clouds",
+                        "x": 521,
+                        "y": 675
                     },
                     {
                         "src": "projects/meteorimpact/MI_s6.jpg",
-                        "title": "High score list"
+                        "title": "High score list",
+                        "x": 520,
+                        "y": 674
                     }
                 ]
             }
